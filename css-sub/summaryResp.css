@@ -1,0 +1,222 @@
+@media(max-width: 1270px) {
+    .greetingSection {
+        display: none;
+    }
+}
+
+@media(max-width: 1024px) {
+    .content {
+        transform: scale(0.8);
+    }
+
+}
+
+
+@media(max-width: 990px) {
+
+    .content {
+        transform: scale(1);
+        top: 96px;
+    }
+
+    .content-summary {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+
+    .headlineVector {
+        display: none;
+    }
+
+    .headlineSpan {
+        display: none;
+    }
+}
+
+
+@media(max-width: 910px) {
+
+    .content {
+        display: flex;
+        left: unset;
+        right: unset;
+        max-width: 50%;
+        height: calc(100vh - 96px);
+        margin-top: 0;
+    }
+
+    .content-summary {
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 100% !important;
+        max-width: unset;
+        height: 100% !important;
+        position: relative;
+        top: unset;
+        left: unset;
+        margin: unset;
+    }
+
+    .table {
+        max-width: 476px;
+        width: 95vw;
+    }
+
+
+    .spanGreeting {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120%;
+        width: 100%;
+    }
+
+    .headlineSection {
+        flex-direction: column;
+        gap: 0;
+        align-items: start;
+    }
+
+    .spanName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120%;
+        width: 100%;
+    }
+
+
+    .headlineSpan {
+        display: flex;
+        margin-top: -110px;
+    }
+
+    .headlineVector {
+        display: flex;
+        transform: rotate(90deg);
+        margin-left: 56px;
+        height: 120px;
+    }
+
+    .cardLarge {
+        height: 140px;
+    }
+
+    .cardMedium {
+        height: 140px;
+    }
+
+    .cardSmall {
+        height: 140px;
+    }
+}
+
+
+@media(max-width: 642px) {
+    .content {
+        transform: scale(0.8);
+        top: 4vh;
+    }
+
+    .deadlineSpan {
+        font-size: 19px;
+    }
+
+    .dateTextSpan {
+        font-size: 12px;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .content {
+        transform: scale(0.7);
+    }
+
+    .deadlineSpan {
+        font-size: 19px;
+    }
+
+    .dateTextSpan {
+        font-size: 12px;
+    }
+
+    .checkmarkDesktop {
+        height: 50px;
+        width: 50px;
+    }
+
+    .penDesktop {
+        height: 50px;
+        width: 50px;
+    }
+
+    .redArrows {
+        height: 50px;
+        width: 50px;
+    }
+
+    .tasksSpan {
+        font-size: 20px;
+    }
+
+    .tasksAmount {
+        font-size: 64px;
+    }
+
+    .table {
+        max-width: unset;
+        width: unset;
+    }
+}
+
+
+@media(max-width: 380px) {
+
+    .deadlineSpan {
+        font-size: 15px;
+    }
+
+    .dateTextSpan {
+        font-size: 13px;
+    }
+
+    .checkmarkDesktop {
+        height: 40px;
+        width: 40px;
+    }
+
+    .penDesktop {
+        height: 40px;
+        width: 40px;
+    }
+
+    .redArrows {
+        height: 40px;
+        width: 40px;
+    }
+
+    .tasksSpan {
+        font-size: 15px;
+    }
+
+    .tasksAmount {
+        font-size: 50px;
+    }
+}
+
+@media(max-height: 750px) {
+    .headlineSpan {
+        display: none;
+    }
+
+    .headlineSection {
+        margin-bottom: 10px;
+    }
+
+    .headlineSection img {
+        display: none;
+    }
+}

@@ -1,0 +1,39 @@
+@media (max-width: 910px) {
+  .overlay-content-task {
+    max-height: fit-content;
+  }
+
+  .frame119_title_task {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 550px) {
+  .overlay-content-task {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 450px) {
+  .overlay-content-task {
+    transform: scale(0.65);
+    height: fit-content;
+  }
+}
+
+@media (max-width: 380px) {
+  .overlay-content-task {
+    transform: scale(0.6);
+  }
+}
+
+/* height */
+@media (max-height: 800px) {
+  .frame119_title_task {
+    font-size: 32px;
+  }
+
+  .overlay-content-task {
+    height: fit-content;
+  }
+}

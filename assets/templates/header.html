@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="alignItems">
+        <img class="headerLogo dNone" src="../assets/img/summary/logo_header.png" alt="">
+        <span class="headerSpan">Kanban Project Management Tool</span>
+    </div>
+    <div class="headerSymbols">
+        <img onclick="openSelectedQuicklink('help')" class="headerHelp clickable" src="../assets/img/summary/help.svg"
+            alt="">
+        <div onclick="showSubmenu()" class="headerInitialsBG clickable headerInitialsCircle">
+            <span id="headerInitials" class="headerInitials"></span>
+            <span id="headerInitialsLogin" class="headerInitialsLogin"></span>
+        </div>
+    </div>
+    <div class="subMenu dNone" id="subMenu">
+        <div class="subMenuSpanContainer">
+            <span onclick="openSelectedQuicklink('legal')">Legal Notice</span>
+        </div>
+        <div class="subMenuSpanContainer">
+            <span onclick="openSelectedQuicklink('privacy')">Privacy Policy</span>
+        </div>
+        <div onclick="logOut()" class="subMenuSpanContainer">
+            <span>Log out</span>
+        </div>
+    </div>
+</div>
+<div id="overlay-bg-subMenu" onclick="showSubmenu()" class="dNone"></div>

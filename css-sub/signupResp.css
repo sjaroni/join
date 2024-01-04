@@ -1,0 +1,55 @@
+@media(max-width: 910px) {
+    .signUp {
+        padding: 5vh 10vw;
+        width: 90%;
+        height: 62vh;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .inputsDecoration {
+        width: 100%;
+    }
+
+    .logoTopLeft {
+        width: auto;
+        height: 10%;
+        position: fixed;
+        top: calc(2vh + 61px);
+        left: calc(5vw + 50px);
+    }
+
+    .arrowBackground {
+        left: 5%;
+        top: 5%;
+    }
+}
+
+@media(max-width: 500px) {
+    .screen{
+        transform: scale(0.8);
+    }
+
+    .signUp {
+        flex-direction: column;
+        align-items: center;
+        height: 630px;
+        top: 3vh;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .signUp {
+        top: 5vh;
+    }
+}
+
+@media(max-width: 370px) {
+    .signUp {
+        height: 630px;
+        top: 7vh;
+    }
+}

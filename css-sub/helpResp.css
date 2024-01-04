@@ -1,0 +1,41 @@
+@media(max-width: 910px) {
+    .content-help {
+        left: unset;
+        width: 100%;
+        height: calc(100% - 128px - 96px - 80px);
+        bottom: calc(128px + 96px);
+    }
+}
+
+@media(max-width: 450px) {
+    .content {
+        padding-right: 0;
+    }
+
+    .headlineBig {
+        font-size: 47px;
+        overflow-wrap: break-word;
+        inline-size: min-content;
+    }
+
+    .info-text {
+        width: 85%;
+    }
+
+    .arrowBackground {
+        right: 20px;
+    }
+}
+
+@media(max-width: 350px) {
+
+    .info-text div,
+    p,
+    li {
+        font-size: small;
+    }
+
+    .arrowBackground {
+        top: calc(96px + 4vh);
+    }
+}

@@ -1,0 +1,53 @@
+@media(max-width: 910px) {
+    .signUp {
+        justify-content: center;
+        right: auto;
+        top: auto;
+        bottom: 10vh;
+    }
+
+    .buttonsLogin {
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        gap: 21px;
+    }
+
+    .buttonsLogin button {
+        width: clamp(50%, 50vw, 100%);
+    }
+
+    .logIn {
+        display: inline-flex;
+        padding: 5vh 10vw;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90%;
+        height: 60vh;
+    }
+
+    .innerform {
+        width: 100%;
+        gap: 5%;
+    }
+
+    @keyframes logoAnimation {
+        0% {
+            width: 274px;
+            height: 334.072px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        100% {
+            width: auto;
+            height: 10%;
+            position: fixed;
+            top: calc(6vh + 61px);
+            left: calc(5vw + 50px);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="../java_script_sub/w3_include.js"></script>
+  <script src="../java_script_sub/storage.js"></script>
+  <script src="../script.js"></script>
+  <script src="../java_script_sub/board/board.js"></script>
+  <script src="../java_script_sub/board/add_task.js"></script>
+  <script src="../java_script_sub/board/addtask_overlay.js"></script>
+  <script src="../java_script_sub/board/form_reset.js"></script>
+  <script src="../java_script_sub/board/user_selection.js"></script>
+  <script src="../java_script_sub/board/user_selection_html.js"></script>
+  <script src="../java_script_sub/animated_small_label.js"></script>
+  <script src="../java_script_sub/help_functions.js"></script>
+  <script src="../java_script_sub/header.js"></script>
+  <script src="../java_script_sub/contacts/contacts.js"></script>
+  <script src="../java_script_sub/contacts/contacts_overlay.js"></script>
+  <script src="../java_script_sub/contacts/contacts_register.js"></script>
+  <script src="../java_script_sub/contacts/contacts_form.js"></script>
+  <script src="../java_script_sub/contacts/contacts_show.js"></script>
+  <script src="../java_script_sub/contacts/contacts_add.js"></script>
+  <script src="../java_script_sub/contacts/contacts_edit.js"></script>
+  <script src="../java_script_sub/contacts/contacts_delete.js"></script>
+  <script src="../java_script_sub/contacts/contacts_html.js"></script>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css-sub/headerSidebar.css" />
+  <link rel="stylesheet" href="../css-sub/headerSidebarResp.css" />
+  <link rel="stylesheet" href="../css-sub/board/board.css" />
+  <link rel="stylesheet" href="../css-sub/board/task.css" />
+  <link rel="stylesheet" href="../css-sub/board/taskAdd.css" />
+  <link rel="stylesheet" href="../css-sub/board/taskAddResp.css" />
+  <link rel="stylesheet" href="../css-sub/contacts/contacts.css">
+  <link rel="stylesheet" href="../css-sub/contacts/contacts-media.css">
+  <link rel="stylesheet" href="../css-sub/contacts/dialog.css">
+  <link rel="stylesheet" href="../css-sub/contacts/dialog-media.css">
+  <link rel="stylesheet" href="../css-sub/board/user_selection.css" />
+  <link id="favicon" rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+  <title>Join</title>
+</head>
+
+<body id="body" onload="initAddTasks()">
+  <div class="mainContainer column">
+    <div id="header" w3-include-html="../assets/templates/header.html"></div>
+    <div id="sidebar" class="h" w3-include-html="../assets/templates/sidebar.html"></div>
+    <div class="content content_addTask d-flex">
+      <div id="task_form" class="h" w3-include-html="../assets/templates/task_form.html"></div>
+    </div>
+  </div>
+</body>
+
+</html>

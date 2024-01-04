@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+}
+
+.headlineSection {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 56px;
+}
+
+.headlineSummary {
+    color: #000;
+    font-family: Inter;
+    font-size: 61px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /*     position: fixed;
+    top: 206px;
+    left: 328px;
+    bottom: 745px;
+    right: 825px; */
+}
+
+.headlineVector {
+    height: 59px;
+    stroke-width: 3px;
+    stroke: #29ABE2;
+    /*     position: fixed;
+    top: 213px;
+    left: 645px;
+    bottom: 745px;
+    right: 795px; */
+}
+
+.headlineVectorMobile {
+    display: none;
+}
+
+.headlineSpan {
+    color: #2A3647;
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-wrap: nowrap;
+    /*     position: fixed;
+    top: 226.5px;
+    left: 675px;
+    bottom: 765.5px;
+    right: 461px; */
+}
+
+.table {
+    display: flex;
+    width: 50vw;
+    max-width: 560px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.mediumCardSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    flex-shrink: 0;
+}
+
+.mediumCardSection :hover {
+    background-color: #2A3647;
+    cursor: pointer;
+}
+
+.mediumCardSection :hover span {
+    color: white;
+}
+
+.mediumCardSection :hover svg circle {
+    fill: white;
+}
+
+.svgPen:hover path {
+    fill: #2A3647;
+}
+
+.svgCheckmark:hover path {
+    fill: #2A3647;
+}
+
+.cardMedium {
+    display: flex;
+    width: calc(50% - 16px);
+    height: 168px;
+    padding: 19px 19px;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.cardMedium:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cardMedium:hover svg path {
+    stroke: #2A3647;
+}
+
+.largeCardSection {
+    width: 100%;
+}
+
+.largeCardSection :hover {
+    background-color: #2A3647;
+    cursor: pointer;
+}
+
+.largeCardSection :hover span {
+    color: white;
+}
+
+.cardLarge {
+    display: flex;
+    width: 100%;
+    height: 168px;
+    padding: 28px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 61px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+    /*     position: fixed;
+    top: 531.5px;
+    left: 328px;
+    bottom: 324.5px;
+    right: 552px; */
+}
+
+.cardLarge:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.urgentSection {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.redArrowsMobile {
+    display: none;
+}
+
+.vectorGreyMobile {
+    display: none;
+}
+
+
+.deadlineSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.deadlineSpan {
+    color: #2A3647;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.dateTextSpan {
+    color: #2A3647;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.greetingSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: -8vh;
+}
+
+.spanGreeting {
+    width: 100%;
+    color: #2A3647;
+    font-family: Inter;
+    font-size: 47px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.spanName {
+    width: 100%;
+    color: var(--Ligth-blue, #29ABE2);
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.smallCardSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    flex-shrink: 0;
+}
+
+.cardSmall {
+    display: flex;
+    width: calc(33% - 16px);
+    height: 168px;
+    padding: 25px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.cardSmall:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.smallCardSection :hover {
+    background-color: #2A3647;
+    cursor: pointer;
+}
+
+.smallCardSection :hover span {
+    color: white;
+}
+
+.tasksAmount {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.tasksSpan {
+    color: #2A3647;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.flex {
+    display: flex;
+}
+
+.penMobile {
+    display: none;
+}
+
+.penDesktop {
+    background-image: url('../assets/img/summary/pen.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 69px;
+}
+
+.cardMedium:hover .penDesktop {
+    background-image: url('../assets/img/summary/pen-hover.png');
+}
+
+.checkmarkMobile {
+    display: none;
+}
+
+.checkmarkDesktop {
+    background-image: url('../assets/img/summary/checkmark.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 69px;
+}
+
+.cardMedium:hover .checkmarkDesktop {
+    background-image: url('../assets/img/summary/checkmark-hover.png');
+}

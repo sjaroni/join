@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../java_script_sub/w3_include.js"></script>
+  <script src="../java_script_sub/summary.js"></script>
+  <script src="../java_script_sub/board/board.js"></script>
+  <script src="../java_script_sub/board/board_render.js"></script>
+  <script src="../java_script_sub/board/taskContainer_render.js"></script>
+  <script src="../java_script_sub/board/task_overlay.js"></script>
+  <script src="../java_script_sub/board/addtask_overlay.js"></script>
+  <script src="../java_script_sub/board/edittask_overlay.js"></script>
+  <script src="../java_script_sub/board/add_task.js"></script>
+  <script src="../java_script_sub/board/form_reset.js"></script>
+  <script src="../java_script_sub/board/edit_task.js"></script>
+  <script src="../java_script_sub/board/user_selection.js"></script>
+  <script src="../java_script_sub/board/user_selection_html.js"></script>
+  <script src="../java_script_sub/contacts/contacts.js"></script>
+  <script src="../java_script_sub/contacts/contacts_overlay.js"></script>
+  <script src="../java_script_sub/contacts/contacts_register.js"></script>
+  <script src="../java_script_sub/contacts/contacts_form.js"></script>
+  <script src="../java_script_sub/contacts/contacts_show.js"></script>
+  <script src="../java_script_sub/contacts/contacts_add.js"></script>
+  <script src="../java_script_sub/contacts/contacts_edit.js"></script>
+  <script src="../java_script_sub/contacts/contacts_delete.js"></script>
+  <script src="../java_script_sub/contacts/contacts_html.js"></script>
+  <script src="../java_script_sub/animated_small_label.js"></script>
+  <script src="../java_script_sub/storage.js"></script>
+  <script src="../java_script_sub/help_functions.js"></script>
+  <script src="../script.js"></script>
+
+  <script src="../java_script_sub/header.js"></script>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css-sub/headerSidebar.css" />
+  <link rel="stylesheet" href="../css-sub/headerSidebarResp.css" />
+  <link rel="stylesheet" href="../css-sub/board/board.css" />
+  <link rel="stylesheet" href="../css-sub/board/boardResp.css" />
+  <link rel="stylesheet" href="../css-sub/board/taskDialogResp.css" />
+  <link rel="stylesheet" href="../css-sub/board/task.css" />
+  <link rel="stylesheet" href="../css-sub/board/taskAdd.css" id="defaultStyle" />
+  <link rel="stylesheet" href="../css-sub/board/taskAddResp.css" id="defaultStyle" />
+  <link rel="stylesheet" href="../css-sub/board/taskEdit.css" id="smallScreenStyle" />
+  <link rel="stylesheet" href="../css-sub/board/user_selection.css" />
+  <link rel="stylesheet" href="../css-sub/contacts/contacts.css" />
+  <link rel="stylesheet" href="../css-sub/contacts/contacts-media.css">
+  <link rel="stylesheet" href="../css-sub/contacts/dialog.css" />
+  <link rel="stylesheet" href="../css-sub/contacts/dialog-media.css">
+  <link id="favicon" rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>Join</title>
+</head>
+
+<body onload="init()">
+
+  <div class="mainContainer column">
+    <div id="header" w3-include-html="../assets/templates/header.html"></div>
+
+    <div id="sidebar" class="h" w3-include-html="../assets/templates/sidebar.html"></div>
+    <div class="content column content_board-optimize">      
+      <div class="board_headline">
+        <div class="headline_text">Board</div>
+        <div class="frame123">
+          <div class="search_task_web">
+            <input type="text" class="frame121 pointer" id="search" placeholder="Find Task" onkeyup="filterTasks()">
+            <img src="../assets/img/board/vector.svg" alt="">
+            <svg class="btn_search pointer" width="32" height="32" viewBox="0 0 32 32" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_84566_4490" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
+                height="32">
+                <rect width="32" height="32" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_84566_4490)">
+                <path class="btn_search" fill="currentcolor"
+                  d="M13.7118 20.2137C11.8946 20.2137 10.3567 19.5843 9.098 18.3256C7.83931 17.0669 7.20996 15.529 7.20996 13.7118C7.20996 11.8946 7.83931 10.3567 9.098 9.098C10.3567 7.83931 11.8946 7.20996 13.7118 7.20996C15.529 7.20996 17.0669 7.83931 18.3256 9.098C19.5843 10.3567 20.2137 11.8946 20.2137 13.7118C20.2137 14.4454 20.097 15.1372 19.8636 15.7874C19.6302 16.4376 19.3134 17.0127 18.9133 17.5129L24.5149 23.1145C24.6983 23.2979 24.79 23.5313 24.79 23.8147C24.79 24.0981 24.6983 24.3315 24.5149 24.5149C24.3315 24.6983 24.0981 24.79 23.8147 24.79C23.5313 24.79 23.2979 24.6983 23.1145 24.5149L17.5129 18.9133C17.0127 19.3134 16.4376 19.6302 15.7874 19.8636C15.1372 20.097 14.4454 20.2137 13.7118 20.2137ZM13.7118 18.2131C14.9622 18.2131 16.025 17.7755 16.9002 16.9002C17.7755 16.025 18.2131 14.9622 18.2131 13.7118C18.2131 12.4615 17.7755 11.3987 16.9002 10.5234C16.025 9.64815 14.9622 9.21053 13.7118 9.21053C12.4615 9.21053 11.3987 9.64815 10.5234 10.5234C9.64815 11.3987 9.21053 12.4615 9.21053 13.7118C9.21053 14.9622 9.64815 16.025 10.5234 16.9002C11.3987 17.7755 12.4615 18.2131 13.7118 18.2131Z" />
+              </g>
+            </svg>
+          </div>
+          <button class="add_task pointer" onclick="generateOverlayAddTask('todo', 'board')"><span
+              class="buttonText">Add task</span> <img src="../assets/img/board/add.svg"></button>
+        </div>
+      </div>
+      <div class="board_content custom-scrollbar">
+        <div class="d-flex board_grid custom-scrollbar">
+
+          <div class="m-l-10 task_categories">
+            <div class="frame136">To do <img class="pointer" src="../assets/img/board/plus_button.svg"
+                onclick="generateOverlayAddTask('todo', 'board')"></div>
+            <div class="column_title">
+              <div class="custom-scrollbar" id="todo" ondrop="moveTo('todo')" ondragover="allowDrop(event)"></div>
+            </div>
+          </div>
+
+          <div class="m-l-10 task_categories">
+            <div class="frame149">In Progress <img class="pointer" src="../assets/img/board/plus_button.svg"
+                onclick="generateOverlayAddTask('inProgress', 'board')"></div>
+            <div class="column_title">
+              <div class="custom-scrollbar" id="inProgress" ondrop="moveTo('inProgress')" ondragover="allowDrop(event)">
+              </div>
+            </div>
+          </div>
+
+          <div class="m-l-10 task_categories">
+            <div class="frame137">Await feedback <img class="pointer" src="../assets/img/board/plus_button.svg"
+                onclick="generateOverlayAddTask('awaitFeedback', 'board')"></div>
+            <div class="column_title">
+              <div class="custom-scrollbar" id="awaitFeedback" ondrop="moveTo('awaitFeedback')"
+                ondragover="allowDrop(event)"></div>
+            </div>
+          </div>
+
+          <div class="m-l-10 task_categories">
+            <div class="frame138">Done</div>
+            <div class="column_title">
+              <div class="custom-scrollbar" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- overlay task -->
+  <div id="overlay-bg-task" class="overlay-bg-task d-none" onclick="closeTaskOverlay()">
+    <div id="overlay-content-task" class="overlay-content-task d-flex" onclick="doNotClose(event)">
+
+      <div id="overlayTaskContent"></div>
+
+    </div>
+  </div>
+
+  <!-- overlay addtask or edittask -->
+  <div id="taskContainer"></div>
+
+</body>
+
+</html>

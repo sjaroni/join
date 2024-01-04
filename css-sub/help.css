@@ -1,0 +1,110 @@
+.headlineBig {
+    color: #000;
+    font-family: Inter;
+    font-size: 61px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.headlineMid {
+    color: var(--black, #000);
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.headlineSmall {
+    color: var(--black, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+
+.text {
+    align-self: stretch;
+    color: var(--black, #000);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.content {
+    display: flex;
+    height: calc(100% - 96px - 8vh);
+
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: auto;
+
+    padding-right: 75px;
+    padding-bottom: 80px;
+}
+
+.content-help {
+    left: 232px;
+    right: 0;
+    width: calc(100% - 232px);
+    max-width: fit-content;
+}
+
+
+.counts {
+    display: flex;
+    gap: 35px;
+}
+
+.countsNumbers {
+    color: var(--black, #000);
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.textHighlight {
+    color: var(--Ligth-blue, #29ABE2);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.arrowBackground {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 24px;
+
+    z-index: 1;
+    position: absolute;
+    top: calc(8vh + 130px);
+    right: 35px;
+}
+
+.arrowBackground:hover {
+    background: #ededee;
+}
+
+.arrowBack:hover {
+    transform: scale(1.1);
+}

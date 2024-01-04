@@ -1,0 +1,30 @@
+.small-overlay {
+    display: flex;
+    width: 326px;
+    height: 74px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    background: #2A3647;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+
+    color: #FFF;
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    position: fixed;
+    bottom: 5vh;
+}
+
+@media (max-width: 450px) {
+    .small-overlay {
+        transform: scale(0.7);
+        position: relative;
+        bottom: 150px;
+    }
+}

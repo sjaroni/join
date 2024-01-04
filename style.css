@@ -1,0 +1,136 @@
+@import url('css-sub/fonts.css');
+
+:root {
+  --bg-body: #f5f5f5;
+  --bg-login: #ffffff;
+  --bg-header: #ffffff;
+  --bg-button: #2a3647;
+  --bg-menu: #2a3647;
+  --bg-menu-hover: #081931;
+  --bg-arrow-up: #ff3d00;
+  --bg-default: #f6f7f8;
+  --text-btn: #ffffff;
+  --fo-bo: #d1d1d1;
+  --svg: #cdcdcd;
+  --cutline: #29abe2;
+  --cutline2: #d1d1d1;
+  --headline: #000000;
+  --font-color: #2a3647;
+  --sub: #29abe2;
+  --good-morning: #29abe2;
+  --sub-sub: #a8a8a8;
+  --progressbar: #4589ff;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #A8A8A8;
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #787878;
+}
+
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
+  /*border: 1px solid red;*/
+}
+
+body {
+  background: #F6F7F8;
+  overflow: hidden;
+}
+
+.container {
+  height: 1024px;
+  max-height: 1024px;
+  background-color: var(--bg-default);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Summary, Add Task, Board, Contacts, Help, Privacy Policy, Legal Notice, etc. */
+.text-title {
+  font-weight: 700;
+  font-size: 61px;
+  line-height: 73.2px;
+  color: var(--headline);
+}
+
+.btn-dark {
+  background-color: var(--bg-button);
+  border: 1px solid var(--bg-button);
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 21px;
+  line-height: 25.2px;
+  font-weight: 700;
+  color: var(--text-btn);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/*Additional CSS to work with Header and Sidebar */
+.mainContainer {
+  display: flex;
+
+}
+
+.content {
+  display: flex;
+  left: 232px;
+  top: 96px;
+  width: calc(100% - 232px);
+  max-width: 75vw;
+  height: calc(100vh - 96px);
+  position: absolute;
+  margin-left: 5vw;
+  margin-top: 8vh;
+
+}
+
+/* .h {
+  height: calc(100vh - 96px);
+} */
+
+#landscape {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+}
+
+#landscapeImg {
+  width: 10vw;
+  height: auto;
+}
+
+#landscapeText {
+  color: #000000;
+}
+
+.bs-i {
+  box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+}

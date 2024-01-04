@@ -1,0 +1,158 @@
+@media(max-width: 910px) {
+    .header {
+        padding: 20px 40px 20px 0px;
+    }
+
+    .headerLogo {
+        display: flex;
+    }
+
+    .headerSpan {
+        display: none;
+    }
+
+    .headerLogo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebarMobile {
+        display: flex;
+    }
+
+    .sidebarMobile {
+        display: flex;
+        width: 100%;
+
+        padding: 64px 0px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        background: #2A3647;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+        z-index: 10;
+        position: absolute;
+        bottom: 0px
+    }
+
+    .quicklinks {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 15px;
+        width: 90%;
+        color: white;
+        position: absolute;
+        bottom: 15px;
+    }
+
+    .quicklinksSpan {
+        display: flex;
+        flex-direction: column;
+        border-radius: 15%;
+        width: 120px;
+        height: 100px;
+        padding: 8px 56px;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .addTaskSpan {
+        width: 80px;
+    }
+}
+
+
+@media(max-width: 642px) {
+    .headerHelp {
+        display: none;
+    }
+
+    .quicklinks {
+        position: absolute;
+        bottom: 3px;
+    }
+
+    .quicklinksSpan {
+        display: flex;
+        width: 85px;
+        height: 120px;
+        padding: 15px 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        flex-shrink: 0;
+        border-radius: 8px;
+    }
+
+    .quicklinksSpan img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/*Iphone XR*/
+@media(max-width: 414px) {
+    .sidebarMobile {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+/*Galaxy S20 Ultra*/
+@media(max-width: 412px) {
+    .sidebarMobile {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+/*Pixel 5*/
+@media(max-width: 393px) {
+    .sidebarMobile {
+        position: absolute;
+        bottom: -1px;
+    }
+
+    .quicklinks {
+        gap: 5px;
+    }
+}
+
+/*iphone*/
+@media(max-width: 375px) {
+    .sidebarMobile {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .quicklinks {
+        width: unset;
+    }
+
+    .quicklinksSpan {
+        width: 60px;
+        padding: 15px 4px;
+    }
+
+    .quicklinksSpan a {
+        font-size: 12px;
+    }
+}
+
+/*Galaxy S8*/
+@media(max-width: 360px) {
+    .sidebarMobile {
+        position: absolute;
+        bottom: -1px;
+    }
+}

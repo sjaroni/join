@@ -1,0 +1,130 @@
+.flex {
+    display: flex;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 45px;
+    border: 2px solid white;
+}
+
+.inner-circle {
+    display: flex;
+    width: 28px;
+    height: 10px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #FFF;
+    text-align: center;
+
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.m-left-10 {
+    margin-left: 10px;
+}
+
+.user {
+    display: flex;
+    width: 416px;
+    padding: 7px 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+}
+
+.user:hover {
+    background-color: #EEE;
+}
+
+.user-active {
+    background-color: #2A3647;
+}
+
+.user-active:hover {
+    background-color: #091931;
+}
+
+.user-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-name {
+    color: var(--black, #000);
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.user-name-active {
+    color: #FFFFFF
+}
+
+.user-checkbox {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+#user_selection-background {
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    max-height: calc(18vh + 48px);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding-top: 48px;
+    z-index: 51;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+}
+
+#user_selection {
+    overflow-y: auto;
+    max-height: 18vh;
+    width: 100%;
+}
+
+#selected_user {
+    overflow: auto;
+    padding-left: 10px;
+    max-width: 100%;
+}
+
+.add-contact-button-area {
+    display: flex;
+    width: 100%;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.w-100 {
+    width: 100% !important;
+}

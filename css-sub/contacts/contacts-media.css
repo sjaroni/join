@@ -1,0 +1,230 @@
+@media (max-width: 1200px) {
+    .content-contact {
+        max-width: 100%;
+        left: 232px;
+    }
+
+    .show-contact {
+        width: -webkit-fill-available;
+        margin-right: 5vw;
+    }
+
+    .arrow-back {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: calc(8vh + 18px);
+        right: 2vw;
+    }
+
+    .show-contact-headline {
+        justify-content: flex-start;
+    }
+
+    .contact-inner-register,
+    .contact-register {
+        z-index: 1;
+        width: 100%;
+    }
+
+    .contact-register {
+        position: relative;
+        left: 0;
+    }
+
+    .contact-register button {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        bottom: 60px;
+        right: 60px;
+        padding: 12px;
+        border-radius: 46px;
+        border: 1px;
+        gap: 10px;
+
+        border-radius: 46px;
+        background: var(--version-2-main-color, #2A3647);
+
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .contact-register button span {
+        display: none;
+    }
+
+    .contact-register img {
+        height: 80%;
+    }
+
+    .contact-register button:hover {
+        border-radius: 74px;
+        background: var(--Ligth-blue, #29ABE2);
+
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (max-width: 910px) {
+    .contact {
+        margin-top: 5vh;
+    }
+
+    .content-contact {
+        width: 100%;
+        overflow: hidden;
+        left: unset;
+    }
+
+    .contact-register {
+        position: relative;
+        left: 0;
+        height: calc(100% - 128px);
+    }
+
+    .show-contact {
+        width: -webkit-fill-available;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+
+    .arrow-back {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: calc(8vh + 18px);
+        right: 5vw;
+    }
+
+    .contact-register button {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        right: 30px;
+        bottom: 20px;
+        padding: 12px;
+        border-radius: 46px;
+        border: 1px;
+        gap: 10px;
+
+        border-radius: 46px;
+        background: var(--version-2-main-color, #2A3647);
+
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .contact-register button span {
+        display: none;
+    }
+
+    .contact-register img {
+        height: 80%;
+    }
+}
+
+@media (max-height: 830px) {
+    .contact {
+        gap: 10px;
+        margin-top: 2vh;
+    }
+
+    .show-contact {
+        margin-top: 4vh;
+    }
+
+    .arrow-back {
+        top: calc(4vh + 18px);
+    }
+}
+
+@media (max-width: 768px) {
+    .show-contact-headline {
+        align-items: start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .show-contact-headline img {
+        width: 6px;
+        height: 90px;
+        transform: rotate(90deg);
+        position: relative;
+        top: 50px;
+        left: 45px;
+        margin: -40px 0;
+    }
+
+    .show-contact-h1-sub {
+        position: relative;
+        top: -5px;
+    }
+
+    .contact-headline {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: unset;
+        height: unset;
+    }
+
+    .contact-headline-initials {
+        min-width: 80px;
+        min-height: 80px;
+    }
+
+    .contact-headline-initials-font {
+        display: flex;
+        width: 53.333px;
+        height: 19.048px;
+        flex-direction: column;
+        justify-content-contact: center;
+        flex-shrink: 0;
+
+        color: #FFF;
+        text-align: center;
+
+        font-family: Inter;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    .contact-name {
+        color: #000;
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .contact-register {
+        padding: 0;
+    }
+
+    .contact-inner-register {
+        padding: 16px 22px;
+    }
+}
+
+@media (max-height: 735px) {
+    .show-contact-h1-sub {
+        display: none;
+    }
+
+    .show-contact-headline img {
+        top: 0;
+    }
+
+    .contact {
+        top: -30px;
+    }
+
+    .contact-show-info {
+        height: 100%;
+        margin: 10px 0;
+    }
+}

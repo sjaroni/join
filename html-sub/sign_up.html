@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="../java_script_sub/w3_include.js"></script>
+    <script src="../java_script_sub/storage.js"></script>
+    <script src="../script.js"></script>
+    <script src="../java_script_sub/login/signup.js"></script>
+    <script src="../java_script_sub/help_functions.js"></script>
+    <script src="../java_script_sub/animated_small_label.js"></script>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css-sub/signup.css" />
+    <link rel="stylesheet" href="../css-sub/signupResp.css" />
+
+    <link id="favicon" rel="icon" type="image/png" href="../assets/img/favicon.png">
+
+    <title>Join</title>
+
+</head>
+
+<body onload="includeHTML(); loadUsers()">
+
+
+    <img class="logoTopLeft" src="/assets/img/login/logo_dark.png" alt="">
+
+    <div id="screen" class="screen">
+        <div id="bodySignup" class="signUp ">
+            <div class="arrowBackground clickable" onclick="openLogin()">
+                <svg class="arrowBack" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.4373 14.6667H25.3333C26.0696 14.6667 26.6666 15.2637 26.6666 16.0001C26.6666 16.7364 26.0696 17.3334 25.3333 17.3334H10.4373L16.6466 23.5427C17.1672 24.0634 17.1672 24.9074 16.6466 25.4281C16.126 25.9487 15.2819 25.9487 14.7613 25.4281L6.74746 17.4143C5.96642 16.6332 5.96642 15.3669 6.74747 14.5858L14.7613 6.57206C15.2819 6.05144 16.126 6.05144 16.6466 6.57206C17.1672 7.09268 17.1672 7.93677 16.6466 8.45739L10.4373 14.6667Z"
+                        fill="#29ABE2" />
+                </svg>
+            </div>
+            <div class="headlineSignUp">
+                <span>Sign up</span>
+                <img src="../assets/img/login/vector_blue_underline.png">
+            </div>
+            <form onsubmit="registerUser(); return false">
+
+                <div class="inputsSignUp">
+                    <div class="inputsDecoration" id="decoSignupName">
+                        <div class="inputs">
+                            <input onfocus="changeBorderOnFocus('signupName')" id="signupName" type="text"
+                                placeholder="Name" required>
+                            <img src="../assets/img/login/person.png">
+                        </div>
+                    </div>
+
+                    <div class="inputsDecoration" id="decoSignupEmail">
+                        <div class="inputs">
+                            <input onfocus="changeBorderOnFocus('signupEmail')" id="signupEmail" type="email"
+                                placeholder="Email" required>
+                            <img src="../assets/img/login/mail.png">
+                        </div>
+                    </div>
+
+                    <div class="inputsDecoration" id="decoSignupPassword">
+                        <div class="inputs">
+                            <input onfocus="changeBorderOnFocus('signupPassword')" id="signupPassword" type="password"
+                                placeholder="Password" required>
+                            <img onclick="passwordVisibilityLock('passwordLock')" id="passwordLock"
+                                src="../assets/img/login/lock.png">
+                            <img onclick="passwordVisibilityLock('passwordVisibilityOff')" id="passwordVisibilityOff"
+                                class="dNone" src="../assets/img/login/visibility_off.png">
+                            <img onclick="passwordVisibilityLock('passwordVisibility')" id="passwordVisibility"
+                                class="dNone" src="../assets/img/login/visibility.png">
+                        </div>
+                    </div>
+
+                    <div class="inputsDecoration" id="decoSignupConfirmation">
+                        <div class="inputs">
+                            <input onfocus="changeBorderOnFocus('signupConfirmation')" id="signupConfirmation"
+                                type="password" placeholder="Confirm Password" required>
+                            <img onclick="confirmationVisibilityLock('confirmationLock')" id="confirmationLock"
+                                src="../assets/img/login/lock.png">
+                            <img onclick="confirmationVisibilityLock('confirmationVisibilityOff')"
+                                id="confirmationVisibilityOff" class="dNone"
+                                src="../assets/img/login/visibility_off.png">
+                            <img onclick="confirmationVisibilityLock('confirmationVisibility')"
+                                id="confirmationVisibility" class="dNone" src="../assets/img/login/visibility.png">
+                        </div>
+                    </div>
+
+                    <div id="signupMsgBox" class="signupMsgBox">
+
+                    </div>
+
+                    <div class="settingsSignUp">
+                        <div class="rememberMe">
+                            <img id="signupCheckboxUnchecked" onclick="changeCheckbox()"
+                                class="clickable transform checkboxBG" src="/assets/img/login/checkbox_unchecked.png"
+                                alt="">
+                            <img id="signupCheckboxChecked" onclick="changeCheckbox()"
+                                class="dNone clickable transform checkboxBG"
+                                src="/assets/img/login/checkbox_checked.png" alt="">
+                            <span>I accept the</span>
+                            <span onclick="openPrivacy()" class="settingsSignUpSpan transform">Privacy policy</span>
+                        </div>
+                    </div>
+
+                    <div class="buttonsSignUp">
+                        <div class="svgSignUp">
+
+                            <!--FakeButton-->
+                            <svg id="signupFakeSubmit" class="fakeSubmitButton" width="126" height="55"
+                                viewBox="0 0 126 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="126" height="55" rx="8" fill="#2A3647" />
+                                <path
+                                    d="M33.6126 24.1197C33.5529 23.5181 33.2969 23.0508 32.8445 22.7177C32.392 22.3846 31.7781 22.218 31.0025 22.218C30.4755 22.218 30.0305 22.2926 29.6676 22.4418C29.3047 22.5859 29.0263 22.7873 28.8324 23.0458C28.6435 23.3043 28.549 23.5977 28.549 23.9258C28.5391 24.1992 28.5962 24.4379 28.7205 24.6417C28.8498 24.8455 29.0263 25.022 29.25 25.1712C29.4737 25.3153 29.7322 25.4421 30.0256 25.5515C30.3189 25.6559 30.6321 25.7454 30.9652 25.82L32.3374 26.1481C33.0036 26.2972 33.6151 26.4961 34.1719 26.7447C34.7287 26.9933 35.2109 27.299 35.6186 27.6619C36.0263 28.0249 36.342 28.4524 36.5657 28.9446C36.7944 29.4368 36.9112 30.0011 36.9162 30.6374C36.9112 31.5721 36.6726 32.3825 36.2003 33.0685C35.733 33.7496 35.0568 34.2791 34.1719 34.657C33.2919 35.0298 32.2305 35.2163 30.9876 35.2163C29.7546 35.2163 28.6808 35.0273 27.766 34.6495C26.8562 34.2717 26.1452 33.7124 25.6332 32.9716C25.1261 32.2259 24.8601 31.3036 24.8352 30.2049H27.9599C27.9947 30.717 28.1413 31.1445 28.3999 31.4876C28.6634 31.8256 29.0138 32.0817 29.4513 32.2557C29.8938 32.4247 30.3935 32.5092 30.9503 32.5092C31.4972 32.5092 31.9719 32.4297 32.3746 32.2706C32.7823 32.1115 33.098 31.8903 33.3217 31.6069C33.5455 31.3235 33.6573 30.9979 33.6573 30.63C33.6573 30.2869 33.5554 29.9986 33.3516 29.7649C33.1527 29.5312 32.8594 29.3324 32.4716 29.1683C32.0888 29.0043 31.619 28.8551 31.0621 28.7209L29.3991 28.3033C28.1115 27.9901 27.0948 27.5004 26.3491 26.8342C25.6033 26.168 25.233 25.2706 25.2379 24.142C25.233 23.2173 25.479 22.4094 25.9762 21.7184C26.4783 21.0273 27.1669 20.4879 28.0419 20.1001C28.9169 19.7124 29.9112 19.5185 31.0249 19.5185C32.1584 19.5185 33.1477 19.7124 33.9929 20.1001C34.843 20.4879 35.5043 21.0273 35.9766 21.7184C36.4489 22.4094 36.6925 23.2099 36.7074 24.1197H33.6126ZM39.0285 35V23.5455H42.2053V35H39.0285ZM40.6244 22.0689C40.1521 22.0689 39.7469 21.9123 39.4088 21.5991C39.0757 21.2809 38.9092 20.9006 38.9092 20.4581C38.9092 20.0206 39.0757 19.6452 39.4088 19.332C39.7469 19.0138 40.1521 18.8548 40.6244 18.8548C41.0967 18.8548 41.4994 19.0138 41.8325 19.332C42.1705 19.6452 42.3396 20.0206 42.3396 20.4581C42.3396 20.9006 42.1705 21.2809 41.8325 21.5991C41.4994 21.9123 41.0967 22.0689 40.6244 22.0689ZM49.9107 39.5341C48.8816 39.5341 47.9991 39.3924 47.2633 39.109C46.5325 38.8306 45.9508 38.4503 45.5183 37.968C45.0858 37.4858 44.8049 36.9439 44.6756 36.3423L47.6138 35.9471C47.7033 36.1758 47.845 36.3896 48.0389 36.5884C48.2328 36.7873 48.4888 36.9464 48.807 37.0657C49.1301 37.19 49.5229 37.2521 49.9853 37.2521C50.6763 37.2521 51.2456 37.0831 51.693 36.745C52.1454 36.4119 52.3716 35.8526 52.3716 35.0671V32.9716H52.2374C52.0982 33.2898 51.8894 33.5906 51.611 33.8739C51.3326 34.1573 50.9746 34.3885 50.5371 34.5675C50.0996 34.7464 49.5776 34.8359 48.9711 34.8359C48.111 34.8359 47.3279 34.6371 46.622 34.2393C45.921 33.8366 45.3617 33.2227 44.9441 32.3974C44.5314 31.5671 44.3251 30.5181 44.3251 29.2504C44.3251 27.9528 44.5364 26.869 44.959 25.9989C45.3816 25.1289 45.9434 24.4776 46.6444 24.0451C47.3503 23.6126 48.1234 23.3963 48.9636 23.3963C49.6049 23.3963 50.1419 23.5057 50.5744 23.7244C51.0069 23.9382 51.3549 24.2067 51.6184 24.5298C51.8869 24.848 52.0932 25.1612 52.2374 25.4695H52.3567V23.5455H55.5112V35.1119C55.5112 36.0863 55.2725 36.9016 54.7953 37.5579C54.318 38.2141 53.6568 38.7063 52.8116 39.0344C51.9714 39.3675 51.0044 39.5341 49.9107 39.5341ZM49.9778 32.4496C50.4899 32.4496 50.9224 32.3228 51.2754 32.0692C51.6333 31.8107 51.9068 31.4428 52.0957 30.9656C52.2896 30.4833 52.3865 29.9066 52.3865 29.2354C52.3865 28.5643 52.2921 27.9826 52.1032 27.4904C51.9142 26.9933 51.6408 26.608 51.2828 26.3345C50.9249 26.0611 50.4899 25.9244 49.9778 25.9244C49.4558 25.9244 49.0158 26.0661 48.6578 26.3494C48.2999 26.6278 48.0289 27.0156 47.845 27.5128C47.661 28.0099 47.5691 28.5842 47.5691 29.2354C47.5691 29.8967 47.661 30.4684 47.845 30.9506C48.0339 31.4279 48.3049 31.7983 48.6578 32.0618C49.0158 32.3203 49.4558 32.4496 49.9778 32.4496ZM61.2161 28.3778V35H58.0392V23.5455H61.0669V25.5664H61.2012C61.4547 24.9002 61.8798 24.3732 62.4764 23.9854C63.073 23.5927 63.7963 23.3963 64.6465 23.3963C65.4419 23.3963 66.1355 23.5703 66.7271 23.9183C67.3187 24.2663 67.7786 24.7635 68.1067 25.4098C68.4348 26.0511 68.5989 26.8168 68.5989 27.7067V35H65.4221V28.2734C65.427 27.5724 65.248 27.0256 64.8851 26.6328C64.5222 26.2351 64.0225 26.0362 63.3862 26.0362C62.9586 26.0362 62.5808 26.1282 62.2527 26.3121C61.9295 26.4961 61.676 26.7646 61.492 27.1175C61.313 27.4656 61.2211 27.8857 61.2161 28.3778ZM83.3086 30.1229V23.5455H86.4854V35H83.4354V32.9194H83.3161C83.0575 33.5906 82.6275 34.13 82.0259 34.5376C81.4293 34.9453 80.701 35.1491 79.8409 35.1491C79.0753 35.1491 78.4016 34.9751 77.82 34.6271C77.2383 34.2791 76.7834 33.7844 76.4553 33.1431C76.1321 32.5018 75.968 31.7337 75.9631 30.8388V23.5455H79.1399V30.272C79.1449 30.9482 79.3263 31.4826 79.6843 31.8754C80.0423 32.2681 80.522 32.4645 81.1236 32.4645C81.5064 32.4645 81.8643 32.3775 82.1974 32.2035C82.5305 32.0245 82.799 31.761 83.0028 31.413C83.2116 31.065 83.3136 30.6349 83.3086 30.1229ZM89.0265 39.2955V23.5455H92.1586V25.4695H92.3003C92.4395 25.1612 92.6409 24.848 92.9044 24.5298C93.1729 24.2067 93.5209 23.9382 93.9484 23.7244C94.3809 23.5057 94.9179 23.3963 95.5592 23.3963C96.3944 23.3963 97.165 23.6151 97.871 24.0526C98.577 24.4851 99.1412 25.1388 99.5638 26.0138C99.9864 26.8839 100.198 27.9751 100.198 29.2876C100.198 30.5653 99.9914 31.6442 99.5787 32.5241C99.1711 33.3991 98.6143 34.0629 97.9083 34.5153C97.2073 34.9627 96.4218 35.1864 95.5518 35.1864C94.9353 35.1864 94.4108 35.0845 93.9782 34.8807C93.5507 34.6768 93.2002 34.4208 92.9268 34.1126C92.6533 33.7994 92.4445 33.4837 92.3003 33.1655H92.2034V39.2955H89.0265ZM92.1363 29.2727C92.1363 29.9538 92.2307 30.5479 92.4197 31.055C92.6086 31.5621 92.882 31.9574 93.24 32.2408C93.5979 32.5192 94.0329 32.6584 94.545 32.6584C95.0621 32.6584 95.4996 32.5167 95.8575 32.2333C96.2155 31.945 96.4864 31.5472 96.6704 31.0401C96.8593 30.5281 96.9537 29.9389 96.9537 29.2727C96.9537 28.6115 96.8618 28.0298 96.6778 27.5277C96.4939 27.0256 96.2229 26.6328 95.865 26.3494C95.507 26.0661 95.067 25.9244 94.545 25.9244C94.028 25.9244 93.5905 26.0611 93.2325 26.3345C92.8795 26.608 92.6086 26.9957 92.4197 27.4979C92.2307 28 92.1363 28.5916 92.1363 29.2727Z"
+                                    fill="white" />
+                            </svg>
+
+                            <button id="signupSubmit" type="submit" class="submitButton clickable dNone">
+                                Sign up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupLegalPrivacy" class="legalPrivacy">
+        <button onclick="openLegal()" class="legalPrivacyButton">Privacy Policy</button>
+        <button onclick="openPrivacy()" class="legalPrivacyButton">Legal notice</button>
+    </div>
+
+
+    <!-- overlay signup -->
+    <div id="overlay-bg-signup" class="overlay-bg-signup dNone">
+        <div id="overlay-content-signup" class="overlay-content-signup d-flex">
+            <img class="sucsessimg" src="../assets/img/login/signed_up_successfull.png"
+                alt="">
+        </div>
+    </div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

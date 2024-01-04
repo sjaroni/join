@@ -1,0 +1,83 @@
+.overlay-bg-editTask {
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.addtask_content {
+  flex-direction: column;
+}
+
+.requiredInfo {
+  display: none;
+}
+
+input[type='date']::placeholder {
+  color: #d1d1d1;
+}
+
+.vector4 {
+  display: none;
+}
+
+.frame40 {
+  display: none;
+}
+
+.frame39 {
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
+#addTaskClear {
+  display: none;
+}
+
+#createTaskButton[type='submit'] {
+  display: none;
+}
+
+#editTaskButton {
+  width: auto;
+}
+
+.requiredAsterisk {
+  display: none;
+}
+
+#addTaskInputForm {
+  overflow-y: auto;
+  margin-top: 35px;
+}
+
+.priority {
+  width: 98%;
+}
+
+.frame219,
+#frame74,
+.frame39,
+.task_title,
+.frame203,
+.frame14,
+#frame14_text,
+.task_description,
+.task_description_text,
+.frame207,
+#frame17,
+#frame17_text,
+.task_assigned_to,
+.frame74,
+.framedue,
+.frame211,
+.frame28,
+.frame28_text,
+.category,
+.subtasks,
+.frame14_subtask,
+#frame14_subtask_text,
+#subtaskEdit,
+.user {
+  width: 100% !important;
+}

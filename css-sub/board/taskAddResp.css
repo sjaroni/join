@@ -1,0 +1,261 @@
+@media (max-width: 1352px) {
+  .content_addTask {
+    display: flex;
+    left: 280px;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+@media (max-width: 1351px) {
+  .content_addTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user {
+    width: 100% !important;
+  }
+
+  #task_form {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 328px);
+    top: 130px;
+    left: 280px;
+    position: fixed;
+  }
+
+  .frame40 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #addTaskInputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  #addTaskCancel {
+    display: none;
+  }
+
+  .addtask_content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .frame219 {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow-x: inherit;
+  }
+
+  .vector4 {
+    display: none;
+  }
+
+  .frame39 {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow-y: inherit;
+  }
+
+  #frame24,
+  #frame25,
+  #frame26 {
+    justify-content: center;
+    padding-right: 21px;
+  }
+
+  .task_title,
+  .frame203,
+  .frame14,
+  #frame14_text,
+  .task_description,
+  .task_description_text,
+  .frame207,
+  #frame17,
+  #frame17_text,
+  .task_assigned_to,
+  .frame74,
+  .framedue,
+  .frame211,
+  .frame28,
+  .frame28_text,
+  .category,
+  .subtasks,
+  .frame14_subtask,
+  #frame14_subtask_text,
+  #subtaskEdit {
+    width: 100%;
+  }
+
+  .priority {
+    width: 99%;
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .frame27 {
+    width: auto;
+  }
+
+  #addTaskClear {
+    display: none;
+  }
+}
+
+@media (max-width: 910px) {
+  .content_addTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  #task_form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    left: 0;
+    width: 100%;
+    height: calc(80vh);
+    padding: 16px;
+  }
+
+  #addTaskInputForm {
+    width: 100%;
+  }
+
+  .frame27,
+  .frame35 {
+    width: auto;
+  }
+
+  .priority {
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  .overlay-bg-addTask {
+    left: 0;
+    width: 100%;
+  }
+
+  .overlay-content-addTask {
+    height: calc(100vh - 259px);
+    margin-bottom: 32px;
+    padding: 32px 24px;
+  }
+
+  .frame40 {
+    font-size: 48px;
+  }
+
+  .urgent,
+  .medium,
+  .low {
+    gap: 0px;
+  }
+
+  #frame24,
+  #frame25,
+  #frame26 {
+    padding-right: 8px;
+  }
+
+  .priority_text {
+    right: 8px;
+  }
+
+  .requiredInfo {
+    width: 40%;
+  }
+
+}
+
+@media (max-width: 500px) {
+  label {
+    align-items: center;
+    gap: 4px;
+  }
+
+  #createTaskButton {
+    font-size: 0;
+    width: auto;
+  }
+
+  #subtaskEditInput {
+    width: 75%;
+  }
+
+  .priority_text {
+    font-size: 0;
+  }
+
+  #frame24,
+  #frame25,
+  #frame26 {
+    padding-right: 30px;
+  }
+
+  .overlay-content-addTask {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+
+  #task_form {
+    height: calc(80vh - 128px);
+  }
+
+  .requiredInfo {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 400px) {
+  #addTaskInputForm {
+    padding: 8px;
+  }
+
+  .frame40 {
+    font-size: 36px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .overlay-content-addTask {
+    transform: scale(0.84);
+  }
+}

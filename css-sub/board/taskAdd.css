@@ -1,0 +1,58 @@
+.overlay-bg-addTask {
+  left: 232px;
+  width: calc(100% - 232px);
+  z-index: 4;
+}
+
+.overlay-content-addTask {
+  padding: 48px 16px;
+}
+
+.addtask_content {
+  left: 328px;
+}
+
+.requiredInfo {
+  width: 100%;
+}
+
+.vector4 {
+  stroke-width: 1px;
+  stroke: var(--Style, #d1d1d1);
+  width: 0.001px;
+  height: 424px;
+  flex-shrink: 0;
+  top: 174px;
+  left: 562.25px;
+  border: 1px;
+  transform: rotate(-0deg);
+}
+
+.frame40 {
+  gap: 1px;
+  color: #000;
+  font-family: Inter;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.frame39 {
+  top: 174px;
+  left: 610.25px;
+}
+
+#editTaskButton[type=submit] {
+  display: none;
+}
+
+.requiredAsterisk {
+  color: #ff8190;
+  width: 119px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}

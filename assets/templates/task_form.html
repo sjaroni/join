@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="frame40">Add Task</div>
+<div class="d-none" id="temporaryStatus">todo</div>
+<div class="d-none" id="prioResult"></div>
+<div class="d-none" id="currentTask"></div>
+<div class="d-none" id="category_select"></div>
+<!-- form start -->
+
+<form class="custom-scrollbar" autocomplete="off" id="addTaskInputForm" onsubmit="formSubmit(); return false;">
+  <div id="addtask_content" class="addtask_content">
+    <div class="frame219">
+      <div class="task_title">
+        <div class="task_title_text">
+          Title<sup class="requiredAsterisk">*</sup>
+        </div>
+        <div class="frame203">
+          <div id="frame14" class="frame14">
+            <input required type="text" placeholder="Enter a title" class="pointer" minlength="4" maxlength="30"
+              id="frame14_text" onblur="validateField('frame14_text', 'frame14', 'frame14_label')" />
+          </div>
+          <div id="frame14_label" class="requiredField d-none">This field is required</div>
+        </div>
+      </div>
+      <div class="task_description">
+        <div class="task_description_text">Description<sup class="requiredAsterisk">*</sup></div>
+        <div class="frame207">
+          <div id="frame17" class="pointer">
+            <textarea required placeholder="Enter a Description" minlength="4" maxlength="70" class="pointer"
+              id="frame17_text" onblur="validateField('frame17_text', 'frame17', 'frame17_label')"></textarea>
+          </div>
+          <div id="frame17_label" class="requiredField d-none">This field is required</div>
+        </div>
+      </div>
+
+      <div class="task_assigned_to">
+        <div class="task_assigned_to_text">Assigned To</div>
+        <div id="frame74" onclick="userSelection()" class="frame74 pointer">
+          <input onclick="toggleAssignedTo()" onkeyup="searchContact()" id="search_contact" class="search-contact"
+            placeholder="Select contacts to assign">
+          <img onclick="toggleAssignedTo()" id="arrow_dropdown_addTask" class="arrow-dropdown"
+            src="../../assets/img/add-task/arrow_drop_down.png" alt="Arrow-Image">
+        </div>
+        <div id="user_selection-background" class="d-none bs-i">
+          <div class="d-none custom-scrollbar" id="user_selection"></div>
+        </div>
+        <div id="selected_user" class="flex custom-scrollbar bs-i"></div>
+      </div>
+    </div>
+    <div id="vector4" class="vector4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2" height="426" viewBox="0 0 2 426" fill="none">
+        <path d="M1.24805 1L1.24854 425" stroke="#D1D1D1" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div class="frame39" id="frame39">
+      <div class="framedue">
+        <div class="frame39_duedate">
+          Due date<sup class="requiredAsterisk">*</sup>
+        </div>
+        <div id="frame211" class="frame211">
+          <input id="addtask-duedate" type="date" min="2023-10-04" max="2024-04-20" required class="frame14due pointer"
+            onblur="validateField('addtask-duedate', 'addtask-duedate', 'duedate_label')" />
+          <div id="duedate_label" class="requiredField d-none">This field is required</div>
+        </div>
+      </div>
+
+      <div class="frame28">
+        <div class="frame28_text">Prio<sup class="requiredAsterisk">*</sup></div>
+        <div id="priority" class="priority">
+
+          <div id="frame24" class="urgent pointer" onclick="selectedRadioButton('Urgent', 'frame24')">
+            <input type="radio" value="Urgent" id="Urgent" name="prio" class="radio-urgent pointer"
+              required="required" />
+            <div class="pointer">
+              <span class="priority_text">Urgent</span>
+              <img src="../assets/img/add-task/urgent.svg" alt="Urgent-Image" id="imgUrgent" class="pointer">
+            </div>
+          </div>
+
+          <div id="frame25" class="medium pointer" onclick="selectedRadioButton('Medium', 'frame25')">
+            <input type="radio" value="Medium" id="Medium" name="prio" class="radio-medium pointer"
+              required="required" />
+            <div class="pointer">
+              <span class="priority_text">Medium</span>
+              <img src="../assets/img/add-task/medium.svg" alt="Medium-Image" id="imgMedium" class="pointer">
+            </div>
+          </div>
+
+          <div id="frame26" class="low pointer" onclick="selectedRadioButton('Low', 'frame26')">
+            <input type="radio" value="Low" id="Low" name="prio" class="radio-low pointer" required="required" />
+            <div class="pointer">
+              <span class="priority_text">Low</span>
+              <img src="../assets/img/add-task/low.svg" alt="Low-Image" id="imgLow" class="pointer">
+            </div>
+          </div>
+
+        </div>
+        <div id="priority_label" class="requiredField d-none">This field is required</div>
+      </div>
+
+      <div class="category">
+        <div class="category_text">Category<sup class="requiredAsterisk">*</sup></div>
+        <div id="frame74task" class="frame74 pointer">
+          <input onclick="toggleCategory()" id="category_select_name" class="search-category"
+            placeholder="Select task category" required="required" />
+          <img onclick="toggleCategory()" id="arrow_dropdown_addCategory" class="arrow-dropdown"
+            src="../../assets/img/add-task/arrow_drop_down.png" style="transform: rotate(360deg);" alt="Arrow-Image">
+        </div>
+        <div id="category_selection-background" class="d-none bs-i">
+          <div data-value="0" onclick="setCategory(0,this.getAttribute('data-value'), 'add')"
+            class="categoryElement pointer">HTML + CSS</div>
+          <div data-value="1" onclick="setCategory(0,this.getAttribute('data-value'), 'add')"
+            class="categoryElement pointer">JavaScript</div>
+          <div data-value="2" onclick="setCategory(0,this.getAttribute('data-value'), 'add')"
+            class="categoryElement pointer">Team</div>
+          <div data-value="3" onclick="setCategory(0,this.getAttribute('data-value'), 'add')"
+            class="categoryElement pointer">Meeting</div>
+          <div data-value="4" onclick="setCategory(0,this.getAttribute('data-value'), 'add')"
+            class="categoryElement pointer">Angular</div>
+        </div>
+        <div id="category_select_label" class="requiredField d-none">This field is
+          required</div>
+      </div>
+
+      <div class="subtasks">
+        <div class="subtasks_text">Subtasks</div>
+        <div id="frame14_subtask" class="frame14_subtask">
+          <input type="text" placeholder="Add new subtask" class="pointer" maxlength="30" id="frame14_subtask_text"
+            onfocus="subtaskActions('show')" />
+          <img id="plusSubtaskButton" onfocus="subtaskActions('show')" class="pointer button-hover"
+            src="../assets/img/add-task/plus.svg" alt="Plus-Image">
+          <img id="clearSubtaskInput" onclick="clearInput('frame14_subtask_text')" class="d-none pointer button-hover"
+            src="../assets/img/add-task/cancel.svg" alt="Cancel-Image">
+          <img id="subtask-vector" class="d-none" src="../assets/img/add-task/vector.png" alt="Vector-Image">
+          <img id="addSubtaskInput" onclick="addnewSubtask()" class="d-none pointer button-hover"
+            src="../assets/img/add-task/check_black.svg" alt="Accept-Image">
+        </div>
+        <div id="frame14_subtask_label" class="requiredField d-none">Max number of Subtasks reached</div>
+        <div id="subtaskArea" class="custom-scrollbar">
+
+          <div id="subtaskEdit" class="d-none">
+            <input type="text" maxlength="30" id="subtaskEditInput">
+            <div id="subtaskEditActions"></div>
+          </div>
+          <ul id="subtasklist" class="bs-i"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="taskFormFooter" class="taskFormFooter">
+    <div class="frame35">
+      <div class="frame27">
+        <div id="addTaskClear" class="buttons-cancel pointer" onclick="resetForm()">
+          Clear
+          <img src="../assets/img/add-task/cancel.svg" alt="Cancel-Image" />
+        </div>
+        <div id="addTaskCancel" class="buttons-cancel pointer d-none"
+          onclick="closeAddTaskOverlay(), doNotClose(event)">
+          Cancel
+          <img src="../assets/img/add-task/cancel.svg" alt="Cancel-Image" />
+        </div>
+        <button id="createTaskButton" type="submit" class="primary_check_button pointer">
+          Create Task
+          <img src="../assets/img/add-task/check.svg" alt="Accept-Image" />
+        </button>
+        <button id="editTaskButton" type="submit" class="primary_check_button pointer">
+          Ok
+          <img src="../assets/img/add-task/check.svg" alt="Accept-Image" />
+        </button>
+      </div>
+    </div>
+    <div class="requiredInfo">
+      <sup class="requiredAsterisk">*</sup>This field is required
+    </div>
+  </div>
+
+</form>
+<!-- form end -->
+
+<!-- overlay -->
+<div id="overlay-bg" class="overlay-bg d-none" onclick="closeContactOverlay()">
+  <div id="overlay-content" class="overlay-content d-flex" onclick="doNotClose(event)"></div>
+</div>

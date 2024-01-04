@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../java_script_sub/help_functions.js"></script>
+    <script src="../java_script_sub/w3_include.js"></script>
+    <script src="../script.js"></script>
+    <script src="../java_script_sub/storage.js"></script>
+    <script src="../java_script_sub/contacts/contacts.js"></script>
+    <script src="../java_script_sub/contacts/contacts_overlay.js"></script>
+    <script src="../java_script_sub/contacts/contacts_register.js"></script>
+    <script src="../java_script_sub/contacts/contacts_form.js"></script>
+    <script src="../java_script_sub/contacts/contacts_show.js"></script>
+    <script src="../java_script_sub/contacts/contacts_add.js"></script>
+    <script src="../java_script_sub/contacts/contacts_edit.js"></script>
+    <script src="../java_script_sub/contacts/contacts_delete.js"></script>
+    <script src="../java_script_sub/contacts/contacts_delete_overlay.js"></script>
+    <script src="../java_script_sub/contacts/contacts_html.js"></script>
+    <script src="../java_script_sub/animated_small_label.js"></script>
+    <script src="../java_script_sub/header.js"></script>
+
+
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css-sub/contacts/contacts.css">
+    <link rel="stylesheet" href="../css-sub/contacts/contacts-media.css">
+    <link rel="stylesheet" href="../css-sub/contacts/dialog.css">
+    <link rel="stylesheet" href="../css-sub/contacts/dialog-media.css">
+    <link rel="stylesheet" href="../css-sub/animations.css">
+    <link rel="stylesheet" href="../css-sub/headerSidebar.css" />
+    <link rel="stylesheet" href="../css-sub/headerSidebarResp.css" />
+
+
+
+    <link id="favicon" rel="icon" type="image/png" href="../assets/img/favicon.png">
+
+    <title>Join</title>
+</head>
+
+<body id="body" onload="contactsInit()">
+
+    <div id="main" class="mainContainer column">
+        <div id="header" w3-include-html="../assets/templates/header.html"></div>
+
+        <div id="sidebar" class="h" w3-include-html="../assets/templates/sidebar.html"></div>
+        <div class="content content-contact anti-content d-flex">
+
+            <section id="contact_register" class="contact-register d-flex">
+                <div class="contact-inner-register column custom-scrollbar">
+                    <button onclick="addContact()" class="pointer add-contact-button">
+                        <span>Add new contact</span>
+                        <img src="../assets/img/contacts/person_add.svg">
+                    </button>
+                    <div id="register" class="contact-register-entry"></div>
+                </div>
+            </section>
+            <section class="show-contact d-flex column">
+                <div class="d-flex show-contact-headline">
+                    <h1>Contacts</h1>
+                    <img src="../assets/img/contacts/cutline.svg">
+                    <div class="show-contact-h1-sub">Better with a team</div>
+                </div>
+                <img onclick="returnToRegister()" id="arrow_back" class="arrow-back pointer"
+                    src="../assets/img/contacts/arrow-left-back.png">
+                <div id="show_contact" class="contact"></div>
+            </section>
+
+            <!-- overlay -->
+            <div id="overlay-bg" class="overlay-bg d-none" onclick="closeContactOverlay()">
+                <div id="overlay-content" class="overlay-content d-flex" onclick="doNotClose(event)"></div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
