@@ -35,7 +35,7 @@ function resetRadioButtonClasses(){
  * Reset content
  */
 function resetInnerHTML() {
-  document.getElementById('temporaryStatus').innerHTML = '';
+  document.getElementById('temporaryStatus').innerHTML = 'todo';
   document.getElementById('prioResult').innerHTML = '';
   document.getElementById('selected_user').innerHTML = '';
   document.getElementById('category_select').innerHTML = "";
