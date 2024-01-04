@@ -32,7 +32,7 @@ async function userSelection(isClosed) {
  * @param {Element} search element search_contact
  * @param {Boolean} isClosed status of userSelection
  */
-function renderUsersInUserselection(select, search, isClosed){
+async function renderUsersInUserselection(select, search, isClosed){
   contacts.sort((a, b) =>
   a.register_entry[0].contact_name.localeCompare(
     b.register_entry[0].contact_name,
@@ -114,10 +114,12 @@ function searchContact() {
     let contactID = contacts[i]['register_entry'][0]['contact_ID'];
     let userDiv = userElement(contactID);
 
-    if (contactName.toLowerCase().includes(searchContact)) {
-      userDiv.classList.remove('d-none');
-    } else {
-      userDiv.classList.add('d-none');
+    if(userDiv){
+      if (contactName.toLowerCase().includes(searchContact)) {
+        userDiv.classList.remove('d-none');
+      } else {
+        userDiv.classList.add('d-none');
+      }
     }
   }
 }
