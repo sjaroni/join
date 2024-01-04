@@ -80,7 +80,7 @@ function selectedRadioButton(prio, frameName) {
     (key) =>
       (document.getElementById(
         images[key],
-      ).src = `../../assets/img/add-task/${key.toLowerCase()}.svg`),
+      ).src = `../assets/img/add-task/${key.toLowerCase()}.svg`),
   );
   document.getElementById('priority').classList.remove('error');
   document.getElementById('priority_label').classList.add('d-none');
@@ -88,7 +88,7 @@ function selectedRadioButton(prio, frameName) {
   document.getElementById(frameName).classList.add(`${frameName}_selected`);
   document.getElementById(
     `img${prio}`,
-  ).src = `../../assets/img/add-task/${prio.toLowerCase()}_white.svg`;
+  ).src = `../assets/img/add-task/${prio.toLowerCase()}_white.svg`;
   document.getElementById('prioResult').innerHTML = prio;
 }
 
@@ -259,9 +259,9 @@ function addSubtaskHTML(i) {
           ${newSubtasks[i].subtitle}
         </div>      
         <div class="subtaskActionPanel">
-          <img onclick="editSubtask(${i})" class="pointer button-hover" src="../../assets/img/board/edit.svg">
-          <img class="subtask-vector" src="../../assets/img/add-task/vector_dark.png">
-          <img onclick="deleteSubtask(${i})" class="pointer button-hover" src="../../assets/img/board/delete.svg">
+          <img onclick="editSubtask(${i})" class="pointer button-hover" src="../assets/img/board/edit.svg">
+          <img class="subtask-vector" src="../assets/img/add-task/vector_dark.png">
+          <img onclick="deleteSubtask(${i})" class="pointer button-hover" src="../assets/img/board/delete.svg">
         </div>
       </li>
       `;

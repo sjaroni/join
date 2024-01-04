@@ -45,9 +45,9 @@ function resetInnerHTML() {
  * Reset images
  */
 function resetImages() {
-  document.getElementById('imgUrgent').src = '../../assets/img/add-task/urgent.svg';
-  document.getElementById('imgMedium').src = '../../assets/img/add-task/medium.svg';
-  document.getElementById('imgLow').src = '../../assets/img/add-task/low.svg';
+  document.getElementById('imgUrgent').src = '../assets/img/add-task/urgent.svg';
+  document.getElementById('imgMedium').src = '../assets/img/add-task/medium.svg';
+  document.getElementById('imgLow').src = '../assets/img/add-task/low.svg';
 }
 
 /**

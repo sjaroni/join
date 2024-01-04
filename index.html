@@ -5,20 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="../java_script_sub/w3_include.js"></script>
-  <script src="../script.js"></script>
-  <script src="../java_script_sub/storage.js"></script>
-  <script src="../java_script_sub/login/login.js"></script>
-  <script src="../java_script_sub/help_functions.js"></script>
-  <script src="../java_script_sub/contacts/contacts_register.js"></script>
-  <script src="../java_script_sub/help_functions.js"></script>
+  <script src="./java_script_sub/w3_include.js"></script>
+  <script src="./script.js"></script>
+  <script src="./java_script_sub/storage.js"></script>
+  <script src="./java_script_sub/login/login.js"></script>
+  <script src="./java_script_sub/help_functions.js"></script>
+  <script src="./java_script_sub/contacts/contacts_register.js"></script>
+  <script src="./java_script_sub/help_functions.js"></script>
 
 
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css-sub/index.css" />
-  <link rel="stylesheet" href="../css-sub/indexResp.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./css-sub/index.css" />
+  <link rel="stylesheet" href="./css-sub/indexResp.css" />
 
-  <link id="favicon" rel="icon" type="image/png" href="../assets/img/favicon.png" />
+  <link id="favicon" rel="icon" type="image/png" href="./assets/img/favicon.png" />
 
   <title>Join</title>
 
@@ -27,7 +27,7 @@
 <body onload="renderIndex()">
 
   <div id="logoScreen" class="logoScreen">
-    <img id="startLogo" class="startLogo" src="../assets/img/first-page/big_logo.png" alt="">
+    <img id="startLogo" class="startLogo" src="./assets/img/first-page/big_logo.png" alt="">
   </div>
 
   <div id="startScreen" class="desktopScreen">
@@ -46,7 +46,7 @@
 
             <div class="headlineLogIn">
               <span>Log in</span>
-              <img src="../assets/img/login/vector_blue_underline.png">
+              <img src="./assets/img/login/vector_blue_underline.png">
             </div>
 
             <div class="innerform">
@@ -54,7 +54,7 @@
                 <div class="inputs">
                   <input onfocus="changeBorderOnFocus('loginEmail')" id="loginEmail" type="email" placeholder="Email"
                     required>
-                  <img src="../assets/img/login/mail.png">
+                  <img src="./assets/img/login/mail.png">
                 </div>
               </div>
 
@@ -63,11 +63,11 @@
                   <input onfocus="changeBorderOnFocus('loginPassword')" id="loginPassword" type="password"
                     placeholder="Password" required>
                   <img onclick="passwordVisibilityLock('passwordLock')" id="passwordLock"
-                    src="../assets/img/login/lock.png">
+                    src="./assets/img/login/lock.png">
                   <img onclick="passwordVisibilityLock('passwordVisibilityOff')" id="passwordVisibilityOff"
-                    class="dNone" src="../assets/img/login/visibility_off.png">
+                    class="dNone" src="./assets/img/login/visibility_off.png">
                   <img onclick="passwordVisibilityLock('passwordVisibility')" id="passwordVisibility" class="dNone"
-                    src="../assets/img/login/visibility.png">
+                    src="./assets/img/login/visibility.png">
                 </div>
               </div>
 
@@ -76,9 +76,9 @@
               <div class="settingsLogin">
                 <div class="rememberMe">
                   <img id="loginCheckboxUnchecked" onclick="changeCheckbox()" class="clickable transform checkboxBG"
-                    src="/assets/img/login/checkbox_unchecked.png" alt="">
+                    src="./assets/img/login/checkbox_unchecked.png" alt="">
                   <img id="loginCheckboxChecked" onclick="changeCheckbox()" class="dNone clickable transform checkboxBG"
-                    src="/assets/img/login/checkbox_checked.png" alt="">
+                    src="./assets/img/login/checkbox_checked.png" alt="">
                   <span>Remember me</span>
                 </div>
               </div>
