@@ -17,35 +17,6 @@ async function setItem(key, value) {
   }).then((res) => res.json());
 }
 
-allTaskCategories = [
-  {
-    "id": 0,
-    "title": "HTML + CSS",
-    "bgColor": "#1dd7c1"
-  },
-  {
-    "id": 1,
-    "title": "JavaScript",
-    "bgColor": "#0837ff"
-  },
-  {
-    "id": 2,
-    "title": "Team",
-    "bgColor": "#ff3d00"
-  },
-  {
-    "id": 3,
-    "title": "Meeting",
-    "bgColor": "#1b5e00"
-  },
-  {
-    "id": 4,
-    "title": "Angular",
-    "bgColor": "#5f2562"
-  }
-];
-//setItem('taskCategory', allTaskCategories);
-
 /**
  * Get a key-value pair from remote storage.
  * @param {string} key - name for the remote-storage key
