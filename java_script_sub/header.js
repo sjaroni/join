@@ -8,30 +8,45 @@ let activeUserMail;
 let activeUserInitials;
 let activeUserName;
 
-const URL = 'http://127.0.0.1:5500/';
-//const URL = 'http://127.0.0.1:5500/';
-
-
 const QUICKLINK_LOGIN = {
-    quickSummary: 'http://127.0.0.1:5500/html-sub/summary.html?msg=summary&login=true',
-    quickAddTask: 'http://127.0.0.1:5500/html-sub/add_task.html?msg=addtask&login=true',
-    quickBoard: 'http://127.0.0.1:5500/html-sub/board.html?msg=board&login=true',
-    quickContacts: 'http://127.0.0.1:5500/html-sub/contacts.html?msg=contacts&login=true',
-    privacy: 'http://127.0.0.1:5500/html-sub/privacy_data_protection.html?msg=privacy&login=true',
-    legal: 'http://127.0.0.1:5500/html-sub/legal_notice.html?msg=legal&login=true',
-    help: 'http://127.0.0.1:5500/html-sub/help.html?msg=help&login=true'
+    quickSummary: URL + '/html-sub/summary.html?msg=summary&login=true',
+    quickAddTask: URL + '/html-sub/add_task.html?msg=addtask&login=true',
+    quickBoard: URL + '/html-sub/board.html?msg=board&login=true',
+    quickContacts: URL + '/html-sub/contacts.html?msg=contacts&login=true',
+    privacy: URL + '/html-sub/privacy_data_protection.html?msg=privacy&login=true',
+    legal: URL + '/html-sub/legal_notice.html?msg=legal&login=true',
+    help: URL + '/html-sub/help.html?msg=help&login=true'
 }
 
+// const QUICKLINK_LOGIN = {
+//     quickSummary: 'http://127.0.0.1:5500/html-sub/summary.html?msg=summary&login=true',
+//     quickAddTask: 'http://127.0.0.1:5500/html-sub/add_task.html?msg=addtask&login=true',
+//     quickBoard: 'http://127.0.0.1:5500/html-sub/board.html?msg=board&login=true',
+//     quickContacts: 'http://127.0.0.1:5500/html-sub/contacts.html?msg=contacts&login=true',
+//     privacy: 'http://127.0.0.1:5500/html-sub/privacy_data_protection.html?msg=privacy&login=true',
+//     legal: 'http://127.0.0.1:5500/html-sub/legal_notice.html?msg=legal&login=true',
+//     help: 'http://127.0.0.1:5500/html-sub/help.html?msg=help&login=true'
+// }
 
 const QUICKLINK_GUEST = {
-    quickSummary: 'http://127.0.0.1:5500/html-sub/summary.html?msg=summary',
-    quickAddTask: 'http://127.0.0.1:5500/html-sub/add_task.html?msg=addtask',
-    quickBoard: 'http://127.0.0.1:5500/html-sub/board.html?msg=board',
-    quickContacts: 'http://127.0.0.1:5500/html-sub/contacts.html?msg=contacts',
-    privacy: 'http://127.0.0.1:5500/html-sub/privacy_data_protection.html?msg=privacy',
-    legal: 'http://127.0.0.1:5500/html-sub/legal_notice.html?msg=legal',
-    help: 'http://127.0.0.1:5500/html-sub/help.html?msg=help'
+    quickSummary: URL + '/html-sub/summary.html?msg=summary',
+    quickAddTask: URL + '/html-sub/add_task.html?msg=addtask',
+    quickBoard: URL + '/html-sub/board.html?msg=board',
+    quickContacts: URL + '/html-sub/contacts.html?msg=contacts',
+    privacy: URL + '/html-sub/privacy_data_protection.html?msg=privacy',
+    legal: URL + '/html-sub/legal_notice.html?msg=legal',
+    help: URL + '/html-sub/help.html?msg=help'
 }
+
+// const QUICKLINK_GUEST = {
+//     quickSummary: 'http://127.0.0.1:5500/html-sub/summary.html?msg=summary',
+//     quickAddTask: 'http://127.0.0.1:5500/html-sub/add_task.html?msg=addtask',
+//     quickBoard: 'http://127.0.0.1:5500/html-sub/board.html?msg=board',
+//     quickContacts: 'http://127.0.0.1:5500/html-sub/contacts.html?msg=contacts',
+//     privacy: 'http://127.0.0.1:5500/html-sub/privacy_data_protection.html?msg=privacy',
+//     legal: 'http://127.0.0.1:5500/html-sub/legal_notice.html?msg=legal',
+//     help: 'http://127.0.0.1:5500/html-sub/help.html?msg=help'
+// }
 
 
 /**

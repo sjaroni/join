@@ -111,7 +111,7 @@ function checkMail(email) {
  * opens login page after successfully registered
  */
 function openSuccessfullRegistered(){
-    window.location.href = 'http://127.0.0.1:5500/index.html?msg=userregistered';
+    window.location.href = URL + '/index.html?msg=userregistered';
 }
 
 
@@ -345,7 +345,7 @@ function signupCoverConfirmation(){
  * opens the login page
  */
 function openLogin(){
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = URL + '/index.html';
 }
 
 
@@ -353,7 +353,7 @@ function openLogin(){
  * opens the privacy data protection as a non user/guest
  */
 function openPrivacy(){
-    window.open('http://127.0.0.1:5500/html-sub/privacy_data_protection_external.html', '_blank');
+    window.open(URL + '/html-sub/privacy_data_protection_external.html', '_blank');
 }
 
 
@@ -361,7 +361,7 @@ function openPrivacy(){
  * opens the legal notice as a non user/guest
  */
 function openLegal(){
-    window.open('http://127.0.0.1:5500/html-sub/legal_notice_external.html', '_blank');
+    window.open(URL + '/html-sub/legal_notice_external.html', '_blank');
 }
 
 
