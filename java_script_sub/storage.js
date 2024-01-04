@@ -1,5 +1,3 @@
-const URL = 'http://127.0.0.1:5500';
-//const URL = 'https://stefan-jaroni.developerakademie.net/join-me'
 const STORAGE_TOKEN = 'IW4WUCWUXM0BDH36L7L8D1T3TYC0RCB38BFN8FPA'; // Token S. Jaroni
 const STORAGE_URL = 'https://remote-storage.developerakademie.org/item';
 
