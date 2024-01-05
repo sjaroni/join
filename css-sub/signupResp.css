@@ -1,4 +1,9 @@
 @media(max-width: 910px) {
+
+    .legalPrivacy{
+        bottom: 2vh;
+    }
+
     .signUp {
         padding: 5vh 10vw;
         width: 90%;
@@ -15,10 +20,10 @@
 
     .logoTopLeft {
         width: auto;
-        height: 10%;
+        height: 6%;
         position: fixed;
-        top: calc(2vh + 61px);
-        left: calc(5vw + 50px);
+        top: calc(6vh);
+        left: calc(5vw + 40px);
     }
 
     .arrowBackground {

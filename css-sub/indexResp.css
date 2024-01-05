@@ -3,7 +3,7 @@
         justify-content: center;
         right: auto;
         top: auto;
-        bottom: 10vh;
+        bottom: 12vh;
     }
 
     .buttonsLogin {
@@ -18,14 +18,25 @@
         width: clamp(50%, 50vw, 100%);
     }
 
+    .login-form{
+        height: 90vh;
+    }
+
     .logIn {
         display: inline-flex;
         padding: 5vh 10vw;
         flex-direction: column;
         align-items: center;
-
         width: 90%;
-        height: 60vh;
+        height: 65vh;
+    }
+
+    .inputsLogin{
+        gap: 2px;
+    }
+
+    .headlineLogIn{
+        gap: 2px;
     }
 
     .innerform {
@@ -44,10 +55,16 @@
 
         100% {
             width: auto;
-            height: 10%;
+            height: 6%;
             position: fixed;
-            top: calc(6vh + 61px);
-            left: calc(5vw + 50px);
+            top: calc(6vh);
+            left: calc(5vw + 40px);
         }
+    }
+}
+
+@media(max-width: 420px) {
+    .login{
+        padding: 2vh 10vw;
     }
 }

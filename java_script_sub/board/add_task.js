@@ -334,9 +334,9 @@ function editSubtask(id) {
  */
 function editSubtaskHTML(id) {
   return /*html*/ `
-     <img onclick="deleteSubtask(${id})" class="pointer button-hover" src="../../assets/img/board/delete.svg">
-     <img class="subtask-vector" src="../../assets/img/add-task/vector.png">
-     <img onclick="updateSubtask(${id})" class="pointer button-hover" src="../../assets/img/add-task/check_black.svg">
+     <img onclick="deleteSubtask(${id})" class="pointer button-hover" src="../assets/img/board/delete.svg">
+     <img class="subtask-vector" src="../assets/img/add-task/vector.png">
+     <img onclick="updateSubtask(${id})" class="pointer button-hover" src="../assets/img/add-task/check_black.svg">
      `;
 }
 
