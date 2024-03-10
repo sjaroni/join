@@ -12,20 +12,27 @@ Here is a step-by-step guide on how to use Join:
 1.
 Exploring the Board
 When you log in to Join, you'll find a default board. This board represents your project and contains four default lists: "To Do", "In Progress", “Await feedback” and "Done".
+
 2.
+
 Creating Contacts
 In Join, you can add contacts to collaborate on your projects. Go to the "Contacts" section, click on "New contact", and fill in the required information. Once added, these contacts can be assigned tasks and they can interact with the tasks on the board.
+
 3.
+
 Adding Cards
 Now that you've added your contacts, you can start adding cards. Cards represent individual tasks. Click the "+" button under the appropriate list to create a new card. Fill in the task details in the card, like task name, description, due date, assignees, etc.
+
 4.
+
 Moving Cards
 Moving Cards As the task moves from one stage to another, you can reflect that on the board by dragging and dropping the card from one list to another.
+
 5.
+
 Deleting Cards
 Once a task is completed, you can either move it to the "Done" list or delete it.Deleting a card will permanently remove it from the board. Please exercise cautionwhen deleting cards, as this action is irreversible.
 
 Remember that using Join effectively requieres consistent updates from you and yourteam to ensure the board reflects the current state of your project.
 
-Have more questions about Join? Feel free to contact us at [Your Contact Email]. We´re here to help you!
 Enjoy using Join!
