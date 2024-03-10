@@ -16,7 +16,7 @@ function detectDarkmode() {
   if(isDarkMode)
   {
     let link = document.getElementById('favicon');
-    link.setAttribute('href', 'https://stefan-jaroni.developerakademie.net/join-me/join/assets/img/logo_light.png');    
+    link.setAttribute('href', 'https://kanban.stefan-jaroni.com/assets/img/logo_light.png');
   }
 }
 

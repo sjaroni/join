@@ -9,23 +9,23 @@ let activeUserInitials;
 let activeUserName;
 
 const QUICKLINK_LOGIN = {
-     quickSummary: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/summary.html?msg=summary&login=true',
-     quickAddTask: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/add_task.html?msg=addtask&login=true',
-     quickBoard: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/board.html?msg=board&login=true',
-     quickContacts: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/contacts.html?msg=contacts&login=true',
-     privacy: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/privacy_data_protection.html?msg=privacy&login=true',
-     legal: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/legal_notice.html?msg=legal&login=true',
-     help: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/help.html?msg=help&login=true'
+     quickSummary: 'https://kanban.stefan-jaroni.com/html-sub/summary.html?msg=summary&login=true',
+     quickAddTask: 'https://kanban.stefan-jaroni.com/html-sub/add_task.html?msg=addtask&login=true',
+     quickBoard: 'https://kanban.stefan-jaroni.com/html-sub/board.html?msg=board&login=true',
+     quickContacts: 'https://kanban.stefan-jaroni.com/html-sub/contacts.html?msg=contacts&login=true',
+     privacy: 'https://kanban.stefan-jaroni.com/html-sub/privacy_data_protection.html?msg=privacy&login=true',
+     legal: 'https://kanban.stefan-jaroni.com/html-sub/legal_notice.html?msg=legal&login=true',
+     help: 'https://kanban.stefan-jaroni.com/html-sub/help.html?msg=help&login=true'
  }
 
 const QUICKLINK_GUEST = {
-     quickSummary: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/summary.html?msg=summary',
-    quickAddTask: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/add_task.html?msg=addtask',
-     quickBoard: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/board.html?msg=board',
-     quickContacts: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/contacts.html?msg=contacts',
-     privacy: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/privacy_data_protection.html?msg=privacy',
-     legal: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/legal_notice.html?msg=legal',
-     help: 'https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/help.html?msg=help'
+     quickSummary: 'https://kanban.stefan-jaroni.com/html-sub/summary.html?msg=summary',
+    quickAddTask: 'https://kanban.stefan-jaroni.com/html-sub/add_task.html?msg=addtask',
+     quickBoard: 'https://kanban.stefan-jaroni.com/html-sub/board.html?msg=board',
+     quickContacts: 'https://kanban.stefan-jaroni.com/html-sub/contacts.html?msg=contacts',
+     privacy: 'https://kanban.stefan-jaroni.com/html-sub/privacy_data_protection.html?msg=privacy',
+     legal: 'https://kanban.stefan-jaroni.com/html-sub/legal_notice.html?msg=legal',
+     help: 'https://kanban.stefan-jaroni.com/html-sub/help.html?msg=help'
  }
 
 
@@ -173,7 +173,7 @@ function enteringAsAUser(){
  * redirects to login page if user try to enter without login or guest login
  */
 function enteringWithoutLoginOrGuest(){
-    window.open("https://stefan-jaroni.developerakademie.net/join-me/join/index.html", "_self");
+    window.open("https://kanban.stefan-jaroni.com/index.html", "_self");
 }
 
 
@@ -209,7 +209,7 @@ function showSubmenu(){
  */
 function logOut(){
     localStorage.removeItem('loginData');
-    window.open("https://stefan-jaroni.developerakademie.net/join-me/join/index.html", "_self");
+    window.open("https://kanban.stefan-jaroni.com/index.html", "_self");
 }
 
 
@@ -231,7 +231,7 @@ async function openSelectedQuicklink(id){
  * opens the legal notice as a non user/guest
  */
 function showLegalExternal(){
-    window.open('https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/legal_notice_external.html?msg=legal', '_blank');
+    window.open('https://kanban.stefan-jaroni.com/html-sub/legal_notice_external.html?msg=legal', '_blank');
 }
 
 
@@ -239,7 +239,7 @@ function showLegalExternal(){
  * opens the privacy data protection as a non user/guest
  */
 function showPrivacyExternal(){
-    window.open('https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/privacy_data_protection_external.html?msg=privacy', '_blank');
+    window.open('https://kanban.stefan-jaroni.com/html-sub/privacy_data_protection_external.html?msg=privacy', '_blank');
 }
 
 
@@ -396,5 +396,5 @@ function addBgToQuickContactsResp(){
  * opens board page
  */
 function openBoard(){
-    window.open("https://stefan-jaroni.developerakademie.net/join-me/join/html-sub/board.html?msg=board", "_self");
+    window.open("https://kanban.stefan-jaroni.com/html-sub/board.html?msg=board", "_self");
 }
