@@ -16,7 +16,7 @@ function detectDarkmode() {
   if(isDarkMode)
   {
     let link = document.getElementById('favicon');
-    link.setAttribute('href', 'https://kanban.stefan-jaroni.com/assets/img/logo_light.png');    
+    link.setAttribute('href', 'http://127.0.0.1:5500/join/assets/img/logo_light.png');    
   }
 }
 

@@ -65,7 +65,7 @@ async function login() {
         activeUser = user.email;
         pushLoginData(email, password, user.name);
         await saveUserToLocalStorage('activeUser', activeUser);
-        window.location.href = `https://kanban.stefan-jaroni.com/html-sub/summary.html?msg=login&login=true`;
+        window.location.href = `http://127.0.0.1:5500/join/html-sub/summary.html?msg=login&login=true`;
     }
     else {
         showMsgBoxInvalidPassword();
@@ -259,7 +259,7 @@ function revealPassword() {
  */
 function guestLogin() {
     localStorage.removeItem('activeUser');
-    window.location.href = 'https://kanban.stefan-jaroni.com/html-sub/summary.html?msg=guest';
+    window.location.href = 'http://127.0.0.1:5500/join/html-sub/summary.html?msg=guest';
 }
 
 
@@ -267,7 +267,7 @@ function guestLogin() {
  * opens the signup page
  */
 function openSignUp() {
-    window.location.href = 'https://kanban.stefan-jaroni.com/html-sub/sign_up.html';
+    window.location.href = 'http://127.0.0.1:5500/join/html-sub/sign_up.html';
 }
 
 
@@ -309,7 +309,7 @@ function animateLogo() {
  * opens the legal notice as a non user/guest
  */
 function openLegal() {
-    window.open('https://kanban.stefan-jaroni.com/html-sub/legal_notice_external.html?msg=legal', '_blank');
+    window.open('http://127.0.0.1:5500/join/html-sub/legal_notice_external.html?msg=legal', '_blank');
 }
 
 
@@ -317,7 +317,7 @@ function openLegal() {
  * opens the privacy data protection as a non user/guest
  */
 function openPrivacy() {
-    window.open('https://kanban.stefan-jaroni.com/html-sub/privacy_data_protection_external.html?msg=privacy', '_blank');
+    window.open('http://127.0.0.1:5500/join/html-sub/privacy_data_protection_external.html?msg=privacy', '_blank');
 }
 
 
