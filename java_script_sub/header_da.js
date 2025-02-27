@@ -92,7 +92,7 @@ function loadFromLocalStorage(){
  */
 async function loadUsers(){
     try {
-        users = JSON.parse(await getItem('users'));
+        users = await loadStorageData('/users');
     } catch(e){
         console.error('Loading error:', e);
     }

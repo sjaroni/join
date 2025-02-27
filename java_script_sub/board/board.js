@@ -173,15 +173,18 @@ function filterTasks() {
  */
 function taskProgress(element) {
   let doneSubtaskCount = 0;
-  let allSubtaskCount = element['subtasks'].length;
-  if (element['subtasks'] && allSubtaskCount > 0) {
-    for (const subtask of element['subtasks']) {
-      if (subtask['substatus'] === 'done') {
-        doneSubtaskCount++;
+
+  if (element['subtasks']) {
+    let allSubtaskCount = element['subtasks'].length;
+    if (element['subtasks'] && allSubtaskCount > 0) {
+      for (const subtask of element['subtasks']) {
+        if (subtask['substatus'] === 'done') {
+          doneSubtaskCount++;
+        }
       }
+      let resultProgress = calculateProgress(doneSubtaskCount, allSubtaskCount);
+      generateProgressHTML(resultProgress, doneSubtaskCount, allSubtaskCount);
     }
-    let resultProgress = calculateProgress(doneSubtaskCount, allSubtaskCount);
-    generateProgressHTML(resultProgress, doneSubtaskCount, allSubtaskCount);
   }
 }
 
@@ -248,8 +251,8 @@ function assignedToTask(task) {
  * Load all contacts from remote-storage
  */
 async function loadContacts() {
-  try {
-    contactsTask = JSON.parse(await getItem('contacts'));
+  try {    
+    contactsTask = await loadStorageData('/contacts');
   } catch (e) {
     console.error('Loading error:', e);
   }
@@ -260,7 +263,7 @@ async function loadContacts() {
  */
 async function loadTasks() {
   try {
-    tasks = JSON.parse(await getItem('tasks'));
+    tasks = await loadStorageData('/tasks');
   } catch (e) {
     console.error('Loading error:', e);
   }
@@ -270,8 +273,8 @@ async function loadTasks() {
  * Load all categories from remote-storage
  */
 async function loadTaskCategory() {
-  try {
-    taskCategory = JSON.parse(await getItem('taskCategory'));
+  try {    
+    taskCategory = await loadStorageData('/taskCategory');
   } catch (e) {
     console.error('Loading error:', e);
   }

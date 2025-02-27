@@ -22,7 +22,7 @@ async function getInitialHTMLTemplate() {
             </div>
 
             <div onclick="openBoard()" class="cardMedium">
-                <!--Cehckmark Desktop-->
+                <!--Checkmark Desktop-->
                 <div class="checkmarkDesktop"></div>
                 <div id="summaryDone" class="flex column"></div>
             </div>

@@ -120,25 +120,8 @@ async function saveToStorage(key, data) {
  * 
  */
 async function loadData() {
-    await loadFromStorage('contacts', contacts);
-    await loadFromStorage('categories', categories);
-}
-
-/**
- * This function get the data for the remote storage or gives a error
- * 
- * @param {string} key - This is the key for the remote storage 
- * @param {string} data - This is the value for the remote storage
- */
-async function loadFromStorage(key, data) {
-    try {
-        const storedData = await getItem(key);
-        if (storedData) {
-            Object.assign(data, JSON.parse(storedData));
-        }
-    } catch (e) {
-        console.error('Loading error:', e);
-    }
+    contacts = await loadStorageData('/contacts');
+    categories = await loadStorageData('/categories');
 }
 
 /**

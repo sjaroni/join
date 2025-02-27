@@ -100,7 +100,7 @@ async function renderDesktopContent() {
  * Function is loading the mail from activeUser from local storage
  */
 function loadFromLocalStorage() {
-    activeUserMail = localStorage.getItem('activeUser');
+    activeUserMail = localStorage.getItem('activeUser');    
 }
 
 
@@ -172,7 +172,7 @@ async function greetingUser2() {
  */
 async function loadTodos() {
     try {
-        todos = JSON.parse(await getItem('tasks'));
+        todos = await loadStorageData('/tasks');
     } catch (e) {
         console.error('Loading error:', e);
     }

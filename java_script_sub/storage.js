@@ -1,5 +1,12 @@
-const STORAGE_TOKEN = 'IW4WUCWUXM0BDH36L7L8D1T3TYC0RCB38BFN8FPA'; // Token S. Jaroni
-const STORAGE_URL = 'https://remote-storage.developerakademie.org/item';
+// const STORAGE_TOKEN = 'IW4WUCWUXM0BDH36L7L8D1T3TYC0RCB38BFN8FPA'; // Token S. Jaroni
+// const STORAGE_URL = 'https://remote-storage.developerakademie.org/item';
+const BASE_URL = 'https://remotestorage-a5c8d-default-rtdb.europe-west1.firebasedatabase.app/';
+
+async function loadStorageData(path = '') {
+  let response = await fetch(BASE_URL + path + '.json');
+  return (responseToJson = await response.json());
+}
+
 
 /**
  * Store a key-value pair in remote storage.

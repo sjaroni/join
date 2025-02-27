@@ -134,8 +134,8 @@ async function pushUser(name, email, password){
  * loads all users from backend
  */
 async function loadUsers(){
-    try {
-        users = JSON.parse(await getItem('users'));
+    try {        
+        users = await loadStorageData('/users');
     } catch(e){
         console.error('Loading error:', e);
     }
