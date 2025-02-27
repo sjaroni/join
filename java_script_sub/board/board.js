@@ -115,7 +115,7 @@ function allowDrop(ev) {
 async function moveTo(status) {
   let id = getTaskIndex(currentDraggedElement);
   tasks[id]['status'] = status;
-  await setItem('tasks', JSON.stringify(tasks));
+  await putStorageData('/tasks/' + id + '/status', status);  
   updateHTML();
 }
 

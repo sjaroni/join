@@ -2,12 +2,6 @@
 // const STORAGE_URL = 'https://remote-storage.developerakademie.org/item';
 const BASE_URL = 'https://remotestorage-a5c8d-default-rtdb.europe-west1.firebasedatabase.app/';
 
-async function loadStorageData(path = '') {
-  let response = await fetch(BASE_URL + path + '.json');
-  return (responseToJson = await response.json());
-}
-
-
 /**
  * Store a key-value pair in remote storage.
  * @param {string} key - name for the remote-storage key
@@ -20,6 +14,17 @@ async function setItem(key, value) {
     method: 'POST',
     body: JSON.stringify(payload),
   }).then((res) => res.json());
+}
+
+async function putStorageData(path = '', data = {}) {
+  let response = await fetch(BASE_URL + path + '.json', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  return (responseToJson = await response.json());
 }
 
 /**
@@ -37,4 +42,9 @@ async function getItem(key) {
       }
       throw `Could not find data with key "${key}".`;
     });
+}
+
+async function loadStorageData(path = '') {
+  let response = await fetch(BASE_URL + path + '.json');
+  return (responseToJson = await response.json());
 }
