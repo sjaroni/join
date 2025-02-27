@@ -1,7 +1,7 @@
 /**
- * 
- * @param {*} element 
- * @returns 
+ *
+ * @param {*} element
+ * @returns
  */
 function generateTasksHTML(element) {
   progressHTML = '';
@@ -13,20 +13,31 @@ function generateTasksHTML(element) {
   let prioIcon = element['prio'].toLowerCase();
   let status = element['status'];
   return /*html*/ `
-  <div id="${element['id']}" draggable="true" onclick="generateOverlayContent(${element['id']
-    }),openTaskOverlay()" onmousedown="startTransform(${element['id']
-    }, '${status}')" onmouseup="stopTransform(${element['id']
-    }, '${status}')" ondragstart="startDragging(${element['id']
-    })"  class="card pointer">
+  <div id="${element['id']}" draggable="true" onclick="generateOverlayContent(${
+    element['id']
+  }),openTaskOverlay()" onmousedown="startTransform(${
+    element['id']
+  }, '${status}')" onmouseup="stopTransform(${
+    element['id']
+  }, '${status}')" ondragstart="startDragging(${
+    element['id']
+  })"  class="card pointer">
     <div class="frame119">
       <div class="card_headline">
-      <div class="board_card" style="background: ${taskCategory[element['category']]['bgColor']}">
-      <span class="board_card_label">${taskCategory[element['category']]['title']
-    }</span></div><div class="card_actions" onclick="doNotClose(event)">
-      <button data-value="${status}_up" class="pointer" onclick="startDragging(${element['id']}), changeStatus('${status}', '+'), doNotClose(event)">
+      <div class="board_card" style="background: ${
+        taskCategory[element['category']]['bgColor']
+      }">
+      <span class="board_card_label">${
+        taskCategory[element['category']]['title']
+      }</span></div><div class="card_actions" onclick="doNotClose(event)">
+      <button data-value="${status}_up" class="pointer" onclick="startDragging(${
+    element['id']
+  }), changeStatus('${status}', '+'), doNotClose(event)">
         <img class="arrowUp" src="../assets/img/add-task/arrow_drop_down.png" alt="Arrow-Image">
       </button>
-      <button data-value="${status}_down" class="pointer" onclick="startDragging(${element['id']}), changeStatus('${status}', '-'), doNotClose(event)">
+      <button data-value="${status}_down" class="pointer" onclick="startDragging(${
+    element['id']
+  }), changeStatus('${status}', '-'), doNotClose(event)">
         <img class="arrowDown" src="../assets/img/add-task/arrow_drop_down.png" alt="Arrow-Image">
       </button>
     </div>
@@ -110,10 +121,12 @@ function generateOverlayContent(element) {
   generateSubtaskList(id);
   contentTask.innerHTML = /*html*/ `
   <div class="frame203_task">                   
-    <div class="board_card_task" style="background: ${taskCategory[tasks[id]['category']]['bgColor']
+    <div class="board_card_task" style="background: ${
+      taskCategory[tasks[id]['category']]['bgColor']
     }">
-      <span class="board_card_label_task">${taskCategory[tasks[id]['category']]['title']
-    }</span>
+      <span class="board_card_label_task">${
+        taskCategory[tasks[id]['category']]['title']
+      }</span>
     </div>  
     <img src="../assets/img/contacts/close.svg" class="close-button-task pointer" onclick="closeTaskOverlay(), doNotClose(event)">
     </div>
@@ -166,19 +179,20 @@ async function generateOverlayAddTask(status) {
     `;
   document.getElementById('temporaryStatus').innerHTML = status;
   document.getElementById('addTaskClear').classList.add('d-none');
-  /* document.getElementById('addTaskCancel').classList.remove('d-none'); */
   document.getElementById('vector4').classList.add('d-none');
   document.getElementById('addtask_content').classList.add('column');
-  document.getElementById('taskFormFooter').style = "padding-right: 10px;";
+  document.getElementById('taskFormFooter').style = 'padding-right: 10px;';
   adjustQuicklinkBG();
 }
 
 function generateSubtaskList(id) {
   subtaskHTML = '';
   let subtasks = tasks[id]['subtasks'];
-  for (let i = 0; i < subtasks.length; i++) {
-    let subtask = subtasks[i];
-    generateSubtaskListStatus(id, subtask);
+  if (subtasks) {
+    for (let i = 0; i < subtasks.length; i++) {
+      let subtask = subtasks[i];
+      generateSubtaskListStatus(id, subtask);
+    }
   }
 }
 
@@ -189,7 +203,7 @@ function generateSubtaskListStatus(id, subtask) {
   let newImg;
   let newStatusText;
   if (subStatus == 'open') {
-    currentImg = '../assets/img/login/checkbox_unchecked.png'
+    currentImg = '../assets/img/login/checkbox_unchecked.png';
     newImg = '../assets/img/login/checkbox_checked.png';
     newStatusText = 'done';
   } else {
@@ -200,7 +214,13 @@ function generateSubtaskListStatus(id, subtask) {
   generateSubtaskListHTML(id, subtask, currentImg, newImg, newStatusText);
 }
 
-function generateSubtaskListHTML(id, subtask, currentImg, newImg, newStatusText) {
+function generateSubtaskListHTML(
+  id,
+  subtask,
+  currentImg,
+  newImg,
+  newStatusText,
+) {
   return (subtaskHTML += /*html*/ `
     <div id="subtaskImage${subtask['subid']}" class="subtasks-check pointer" onclick="changeSubtask(${id}, ${subtask['subid']}, '${newStatusText}', '${newImg}'),doNotClose(event)">
       <img id="${subtask['subid']}" class="subtasks-checkbutton" src="${currentImg}">      
@@ -212,10 +232,7 @@ function generateSubtaskListHTML(id, subtask, currentImg, newImg, newStatusText)
 async function changeSubtask(id, subtask, newStatusText, newImg) {
   tasks[id]['subtasks'][subtask]['substatus'] = newStatusText;
   document.getElementById(subtask).src = `${newImg}`;
-  
-  //FIXME - 
-  await setItem('tasks', tasks);
-
+  await putStorageData('/tasks/' + id, tasks[id]);
   updateHTML();
   generateOverlayContent(tasks[id]['id']);
 }
