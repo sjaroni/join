@@ -165,7 +165,7 @@ async function addNewTask() {
   );
 
   await resetForm();
-  await identifyGuest();
+  await identifyGuest();  
   openSelectedQuicklink('quickBoard');
 }
 
@@ -233,7 +233,7 @@ async function changeTaskArray(id, newTask) {
   } else {
     tasks.push(newTask);
   }
-  await setItem('tasks', tasks);
+  await putStorageData('/tasks/' + id, newTask);
 }
 
 /**
