@@ -48,3 +48,11 @@ async function loadStorageData(path = '') {
   let response = await fetch(BASE_URL + path + '.json');
   return (responseToJson = await response.json());
 }
+
+async function deleteStorageData(path = '') {
+  let response = await fetch(BASE_URL + path + '.json', {
+    method: 'DELETE',    
+  });
+
+  return (responseToJson = await response.json());
+}

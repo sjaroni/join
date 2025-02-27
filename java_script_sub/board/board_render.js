@@ -212,7 +212,10 @@ function generateSubtaskListHTML(id, subtask, currentImg, newImg, newStatusText)
 async function changeSubtask(id, subtask, newStatusText, newImg) {
   tasks[id]['subtasks'][subtask]['substatus'] = newStatusText;
   document.getElementById(subtask).src = `${newImg}`;
+  
+  //FIXME - 
   await setItem('tasks', tasks);
+
   updateHTML();
   generateOverlayContent(tasks[id]['id']);
 }

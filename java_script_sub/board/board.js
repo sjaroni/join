@@ -297,8 +297,8 @@ async function deleteTask(searchId) {
   let taskIndex = getTaskIndex(searchId);
   if (taskIndex !== -1) {
     tasks.splice(taskIndex, 1);
-    closeTaskOverlay();
-    await setItem('tasks', tasks);
+    closeTaskOverlay();    
+    deleteStorageData('/tasks/' + searchId);
     init();
   }
 }
