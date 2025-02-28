@@ -166,6 +166,8 @@ async function addNewTask() {
 
   await resetForm();
   await identifyGuest();  
+  // Stefan
+  //FIXME - einkommentieren
   openSelectedQuicklink('quickBoard');
 }
 
@@ -227,13 +229,27 @@ async function createTask(
  * @param {string} newTask - values of Task
  */
 async function changeTaskArray(id, newTask) {
-  let indexToUpdate = getTaskIndex(id);
+  let indexToUpdate = getTaskIndex(id);  
+  console.log(indexToUpdate);
+
   if (indexToUpdate !== -1) {
-    tasks[indexToUpdate] = newTask;
+    tasks[indexToUpdate] = newTask;    
   } else {
     tasks.push(newTask);
+    indexToUpdate = id;
   }
-  await putStorageData('/tasks/' + indexToUpdate, newTask);
+  if (indexToUpdate !== -1) {
+    tasks[indexToUpdate] = newTask;    
+  } else {
+    tasks.push(newTask);
+    indexToUpdate = id;
+  }
+
+  
+
+  //FIXME - new task with id -1
+  await putStorageData('/tasks/' + id, newTask);
+  // await putStorageData('/tasks/' + indexToUpdate, newTask);
 }
 
 /**

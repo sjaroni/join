@@ -115,7 +115,7 @@ function allowDrop(ev) {
 async function moveTo(status) {
   let id = getTaskIndex(currentDraggedElement);
   tasks[id]['status'] = status;
-  await putStorageData('/tasks/' + id, tasks[id]);
+  await putStorageData('/tasks/' + currentDraggedElement, tasks[id]);
   updateHTML();
 }
 
@@ -299,14 +299,17 @@ function getTaskIndex(searchId) {
  * Delete task
  * @param {number} searchId - id of current task
  */
+
+  //FIXME - stefan
+
 async function deleteTask(searchId) {
   let taskIndex = getTaskIndex(searchId);
   if (taskIndex !== -1) {
-    tasks.splice(taskIndex, 1);
-    closeTaskOverlay();    
-    deleteStorageData('/tasks/' + searchId);
-    init();
-  }
+    tasks.splice(taskIndex, 1);    
+  }  
+  closeTaskOverlay();    
+  deleteStorageData('/tasks/' + searchId);
+  init();
 }
 
 /**
