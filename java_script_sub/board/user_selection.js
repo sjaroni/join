@@ -34,12 +34,12 @@ async function userSelection(isClosed) {
  */
 async function renderUsersInUserselection(select, search, isClosed){
   contacts.sort((a, b) =>
-  a.register_entry[0].contact_name.localeCompare(
-    b.register_entry[0].contact_name,
+  a.contact_name.localeCompare(
+    b.contact_name,
   ),);
   select.innerHTML = '';
   for (let i = 0; i < contacts.length; i++) {
-    let contact = contacts[i]['register_entry'][0];
+    let contact = contacts[i];
     let name = contact['contact_name'];
     let initials = contact['contact_initials'];
     let color = contact['contact_color'];
@@ -110,8 +110,10 @@ function showUserSelection(isClosed){
 function searchContact() {
   let searchContact = elementByID('search_contact').value.toLowerCase();
   for (let i = 0; i < contacts.length; i++) {
-    let contactName = contacts[i]['register_entry'][0]['contact_name'];
-    let contactID = contacts[i]['register_entry'][0]['contact_ID'];
+    // let contactName = contacts[i][0]['contact_name'];
+    // let contactID = contacts[i];
+    let contactName = contacts[i]['contact_name'];
+    let contactID = contacts[i]['contact_ID'];
     let userDiv = userElement(contactID);
 
     if(userDiv){

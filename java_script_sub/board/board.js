@@ -202,13 +202,15 @@ async function assignedTo(task) {
 
     for (let j = 0; j < contactsTask.length; j++) {
       let contactTask = contactsTask[j];
-      if (contactTask['register_entry'][0]['contact_ID'] === element) {
+      if (contactTask['contact_ID'] === element) {
         if (counterMember > 3) {
           rest++;
         } else {
           let contactInitials =
-            contactTask['register_entry'][0]['contact_initials'];
-          let contactColor = contactTask['register_entry'][0]['contact_color'];
+            contactTask['contact_initials'];
+          let contactColor = contactTask['contact_color'];
+          //   contactTask[0]['contact_initials'];
+          // let contactColor = contactTask[0]['contact_color'];
           pixelLeft = counterMember % 5 === 0 ? 0 : pixelLeft;
           generateProfileBadgesBoard(contactInitials, contactColor, pixelLeft);
           pixelLeft = pixelLeft + 8;
@@ -230,13 +232,17 @@ async function assignedTo(task) {
 function assignedToTask(task) {
   for (let i = 0; i < contactsTask.length; i++) {
     let contactTask = contactsTask[i];
-    let contactId = contactTask['register_entry'][0]['contact_ID'];
+    // let contactId = contactTask[0];
+    let contactId = contactTask['contact_ID'];
 
     if (tasks[task]['member'].includes(contactId)) {
       let contactInitials =
-        contactTask['register_entry'][0]['contact_initials'];
-      let contactColor = contactTask['register_entry'][0]['contact_color'];
-      let contactName = contactTask['register_entry'][0]['contact_name'];
+        contactTask['contact_initials'];
+      let contactColor = contactTask['contact_color'];
+      let contactName = contactTask['contact_name'];
+      //   contactTask[0]['contact_initials'];
+      // let contactColor = contactTask[0]['contact_color'];
+      // let contactName = contactTask[0]['contact_name'];
 
       generateProfileBadgesTaskOverlay(
         contactInitials,

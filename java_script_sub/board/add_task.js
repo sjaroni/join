@@ -233,7 +233,7 @@ async function changeTaskArray(id, newTask) {
   } else {
     tasks.push(newTask);
   }
-  await putStorageData('/tasks/' + id, newTask);
+  await putStorageData('/tasks/' + indexToUpdate, newTask);
 }
 
 /**
@@ -430,10 +430,10 @@ function setCategory(key, choice, origin) {
  */
 function whoAmi() {
   for (let i = 0; i < contacts.length; i++) {
-    let contactMaillist = contacts[i]['register_entry'][0]['contact_mail'];
+    let contactMaillist = contacts[i]['contact_mail'];
     let checkedMaillist = contactMaillist.includes(activeUserMail);
     if (checkedMaillist) {
-      contactID = contacts[i]['register_entry'][0]['contact_ID'];
+      contactID = contacts[i];
       let userDiv = 'user_name_' + contactID;
       document.getElementById(userDiv).innerHTML += ` <b>(You)`;
     }

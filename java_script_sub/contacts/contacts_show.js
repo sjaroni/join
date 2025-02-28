@@ -50,7 +50,7 @@ function showContact(ID) {
 
 function getLastJsonObjectID() {
     let lastEntry = contacts[contacts.length - 1];
-    let lastEntryID = lastEntry['register_entry'][0]['contact_ID']
+    let lastEntryID = lastEntry['contact_ID']
     return lastEntryID;
 }
 

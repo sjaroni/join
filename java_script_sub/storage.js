@@ -45,8 +45,9 @@ async function getItem(key) {
 }
 
 async function loadStorageData(path = '') {
-  let response = await fetch(BASE_URL + path + '.json');
-  return (responseToJson = await response.json());
+  const response = await fetch(BASE_URL + path + '.json');
+  const data = await response.json();
+  return data ? Object.values(data).filter(item => item !== null) : [];
 }
 
 async function deleteStorageData(path = '') {

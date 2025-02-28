@@ -231,7 +231,7 @@ async function addActiveUserToContacts() {
     let isFound = false;
     for (let i = 0; i < contacts.length; i++) {
 
-        if (contacts[i]['register_entry'][0]['contact_mail'] == activeUserLoginMail) {
+        if (contacts[i]['contact_mail'] == activeUserLoginMail) {
             isFound = true;
         }
     }
@@ -269,7 +269,7 @@ function loginIsYourContact() {
 
     getLoginData();
     for (let i = 0; i < contacts.length; i++) {
-        let contactMail = contacts[i]['register_entry'][0]['contact_mail'];
+        let contactMail = contacts[i]['contact_mail'];
         let checkedMail = contactMail.includes(activeUserLoginMail);
         if (checkedMail) {
             let contactEntry = getIndexOfJson('mail', contactMail);

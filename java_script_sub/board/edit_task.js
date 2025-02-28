@@ -128,7 +128,7 @@ function getValueDueDate(date) {
  * @param {number} thisContact - Contact-ID
  */
 async function checkContacts(thisContact) {  
-  const contactInArray = contacts.some(entry => entry.register_entry.some(contact => contact.contact_ID === thisContact));
+  const contactInArray = contacts.some(contact => contact.contact_ID === thisContact);
   if (contactInArray) {    
     createBadge(thisContact);
   }
