@@ -304,7 +304,7 @@ async function deleteTask(searchId) {
   if (taskIndex !== -1) {
     tasks.splice(taskIndex, 1);    
     closeTaskOverlay();    
-    deleteStorageData('/tasks/' + searchId);
+    await deleteStorageData('/tasks/' + searchId);
     init();
   }
 }
