@@ -25,14 +25,14 @@ function searchMailsInJSON() {
  */
 async function registerUser(){
     let name = document.getElementById('signupName').value;
-    let email = document.getElementById('signupEmail').value;    
+    let email = document.getElementById('signupEmail').value.toLowerCase();    
     if(!checkMail(email)){return;}
     let password = document.getElementById('signupPassword').value;
     let confirmation = document.getElementById('signupConfirmation').value;
     if(await checkName()){
         if(password == confirmation){
             pushUser(name, email, password);
-            await setItem('users', JSON.stringify(users));
+            await putStorageData('/users', users);
             await openSignUpOverlay();
             setTimeout(openSuccessfullRegistered, 1500);
         }
@@ -135,7 +135,7 @@ async function pushUser(name, email, password){
  */
 async function loadUsers(){
     try {        
-        users = await loadStorageData('/users');
+        users = await loadStorageData('/users');        
     } catch(e){
         console.error('Loading error:', e);
     }
