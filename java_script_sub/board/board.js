@@ -299,18 +299,16 @@ function getTaskIndex(searchId) {
  * Delete task
  * @param {number} searchId - id of current task
  */
-
-  //FIXME - stefan
-
 async function deleteTask(searchId) {
   let taskIndex = getTaskIndex(searchId);
   if (taskIndex !== -1) {
     tasks.splice(taskIndex, 1);    
-  }  
-  closeTaskOverlay();    
-  deleteStorageData('/tasks/' + searchId);
-  init();
+    closeTaskOverlay();    
+    deleteStorageData('/tasks/' + searchId);
+    init();
+  }
 }
+
 
 /**
  * change the Task status on onclick
