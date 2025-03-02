@@ -66,10 +66,11 @@ function checkNewMail() {
  */
 function searchMailsInJSON() {
     contacts.forEach(entry => {
-        let registerEntry = entry.register_entry[0];
-
-        emailAddresses.push(registerEntry.contact_mail);
-    });
+        // let registerEntry = entry.register_entry[0];
+        // emailAddresses.push(registerEntry.contact_mail);
+        // let registerEntry = entry.register_entry[0];
+        emailAddresses.push(entry.contact_mail);
+    });    
 }
 
 /**

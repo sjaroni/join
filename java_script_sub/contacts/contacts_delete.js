@@ -6,15 +6,15 @@
 async function deleteContact(ID) {
     let showArea = elementByID('show_contact')
 
-    const indexToDelete = contacts.findIndex(contact => contact['register_entry'][0]['contact_ID'] === ID);
+    const indexToDelete = contacts.findIndex(contact => contact['contact_ID'] === ID);
 
     if (indexToDelete !== -1) {
-        const contactCategory = contacts[indexToDelete]['register_entry'][0]['contact_name'][0].toUpperCase();
+        const contactCategory = contacts[indexToDelete]['contact_name'][0].toUpperCase();
 
         contacts.splice(indexToDelete, 1);
 
         const categoryContactsExist = contacts.some(contact => {
-            const firstLetter = contact['register_entry'][0]['contact_name'][0].toUpperCase();
+            const firstLetter = contact['contact_name'][0].toUpperCase();
             return firstLetter === contactCategory;
         });
 
