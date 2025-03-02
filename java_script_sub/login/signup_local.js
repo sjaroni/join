@@ -135,7 +135,7 @@ async function pushUser(name, email, password){
  */
 async function loadUsers(){
     try {        
-        users = await loadStorageData('/users');
+        users = await loadStorageData('/users');        
     } catch(e){
         console.error('Loading error:', e);
     }

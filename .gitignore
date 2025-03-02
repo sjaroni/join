@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
+/git
+git
 
 script_server.js
 script_local.js
@@ -12,8 +14,10 @@ java_script_sub/header_local.js
 java_script_sub/header_da.js
 java_script_sub/header_server.js
 java_script_sub/login/login_local.js
-java_script_sub/login/login_server_da.js
+java_script_sub/login/login_da.js
+java_script_sub/login/login_server.js
 java_script_sub/login/signup_local.js
+java_script_sub/login/signup_da.js
 java_script_sub/login/signup_server.js
 
 # Node

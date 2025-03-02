@@ -56,7 +56,7 @@ function loginCheckboxOn() {
  * starts the log in procedure
  */
 async function login() {
-    let email = document.getElementById('loginEmail').value;
+    let email = document.getElementById('loginEmail').value.toLowerCase();
     let password = document.getElementById('loginPassword').value;
     checkRememberMe(email, password);
     await loadUsers();
@@ -128,7 +128,7 @@ function pushLoginData(email, password, name) {
  * loads all users from backend
  */
 async function loadUsers() {
-    try {        
+    try {
         users = await loadStorageData('/users');
     } catch (e) {
         console.error('Loading error:', e);
